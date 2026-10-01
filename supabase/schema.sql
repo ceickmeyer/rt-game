@@ -14,6 +14,9 @@ create table if not exists rt_movies (
 -- so the real scores never reach the browser before a guess is submitted.
 alter table rt_movies enable row level security;
 
+-- Planned play order, edited on /admin. Lower plays sooner; null = not queued yet (see rt_queue_append).
+alter table rt_movies add column if not exists queue_pos integer;
+
 -- One movie per calendar day. Days are the player's local date, so the same date maps to the
 -- same movie in every timezone. imdb_id is unique, so a movie can never be used twice.
 create table if not exists rt_daily (
@@ -24,7 +27,7 @@ create table if not exists rt_daily (
 
 alter table rt_daily enable row level security;
 
--- Returns the movie for a day, picking an unused one at random the first time a day is asked for.
+-- Returns the movie for a day, taking the next unused movie in queue order the first time a day is asked for.
 -- Returns null once every movie has been used.
 create or replace function rt_movie_for_day(d date)
 returns text
@@ -44,7 +47,7 @@ begin
     select d, m.imdb_id
     from rt_movies m
     where not exists (select 1 from rt_daily x where x.imdb_id = m.imdb_id)
-    order by random()
+    order by m.queue_pos nulls last, random()
     limit 1
     on conflict do nothing;
   end loop;
@@ -56,3 +59,37 @@ $$;
 
 -- Server (service role) only, otherwise anyone could burn through future days via the public API
 revoke execute on function rt_movie_for_day(date) from public, anon, authenticated;
+
+-- Gives every unqueued movie a position after the current end of the queue, in random order.
+-- Called here on setup and by `npm run import` for newly added movies.
+create or replace function rt_queue_append()
+returns void
+language sql
+as $$
+  update rt_movies m
+  set queue_pos = q.base + q.r
+  from (
+    select imdb_id,
+      row_number() over (order by random()) as r,
+      (select coalesce(max(queue_pos), 0) from rt_movies) as base
+    from rt_movies
+    where queue_pos is null
+  ) q
+  where m.imdb_id = q.imdb_id;
+$$;
+
+-- Saves the order from /admin: ids[1] gets position 1, and so on.
+create or replace function rt_set_queue(ids text[])
+returns void
+language sql
+as $$
+  update rt_movies m
+  set queue_pos = q.pos
+  from unnest(ids) with ordinality as q(imdb_id, pos)
+  where m.imdb_id = q.imdb_id;
+$$;
+
+revoke execute on function rt_queue_append() from public, anon, authenticated;
+revoke execute on function rt_set_queue(text[]) from public, anon, authenticated;
+
+select rt_queue_append();

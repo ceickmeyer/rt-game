@@ -24,4 +24,10 @@ for (let i = 0; i < rows.length; i += 500) {
 		process.exit(1);
 	}
 }
+// put any newly added movies at the end of the play queue
+const { error } = await supabase.rpc('rt_queue_append');
+if (error) {
+	console.error(error);
+	process.exit(1);
+}
 console.log(`Upserted ${rows.length} movies`);

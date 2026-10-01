@@ -19,8 +19,9 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 ## Data pipeline
 - rt_dump.py (MDBList API) writes rt_scores.json:
   { movies: [{ imdb_id, title, year, poster, critic, audience }], skipped: [] }
-- `npm run import` (scripts/import.mjs) upserts the JSON into the rt_movies table. Safe to re-run.
-- Schema: supabase/schema.sql (rt_movies, rt_daily, rt_movie_for_day). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
+- `npm run import` (scripts/import.mjs) upserts the JSON into rt_movies, then calls rt_queue_append
+  so new movies land at the end of the queue in random order. Safe to re-run.
+- Schema: supabase/schema.sql (rt_movies + queue_pos, rt_daily, rt_movie_for_day, rt_queue_append, rt_set_queue). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
 
 ## Security model
 - rt_movies has RLS enabled with NO policies, so only the service-role client can read it
@@ -38,8 +39,8 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - `/` has ssr = false (src/routes/+page.ts): the browser computes its local YYYY-MM-DD and calls
   GET /api/movie?d=... ; the server only accepts UTC today ±1 day (covers every timezone, blocks peeking ahead)
 - rt_daily (day -> imdb_id, imdb_id UNIQUE) guarantees a movie is never reused; the SQL function
-  rt_movie_for_day(d) lazily assigns a random unused movie the first time a day is requested.
-  Execute is revoked from anon/authenticated; only the service role calls it.
+  rt_movie_for_day(d) assigns the next unused movie by rt_movies.queue_pos the first time a day is requested.
+  Execute on all rt_ functions is revoked from anon/authenticated; only the service role calls them.
 - The finished result is saved in localStorage (`rt-game:<day>`) so refreshing can't replay the day
 - The page reloads itself when the local date changes (open tab past midnight)
 - Share text: date, title, points (never the actual scores), site URL
@@ -51,8 +52,14 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - The whole reveal must stay under ~2s (glides capped at 550ms). Respect prefers-reduced-motion.
 - Sounds are Web Audio blips (no files); unlock() must run inside the submit click
 
+## Admin (/admin, src/routes/admin, auth in src/lib/server/admin.ts)
+- Password = ADMIN_PASSWORD env var (optional; unset disables /admin). Cookie holds a sha256 of it, path /admin
+- Shows assigned days (locked) and the upcoming queue with projected dates; ssr = false (dates use admin's local day)
+- Reorder via ↑/↓, position input, sorts applied to the selected rows only (they keep their slots) or the whole queue
+- Save sends the full ordered id list to rt_set_queue. Scores/gaps are hidden behind spoiler bars (the owner plays too)
+
 ## Env (.env locally, same names in Vercel project settings)
-- PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+- PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ADMIN_PASSWORD
 
 ## Commands
 - npm run dev | npm run check | npm run build | npm run import
