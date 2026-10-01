@@ -1,10 +1,12 @@
-import { error, fail } from '@sveltejs/kit';
+import { error, fail, redirect } from '@sveltejs/kit';
 import { supabase } from '#lib/server/supabase.js';
-import { isAdmin, logIn, logOut } from '#lib/server/admin.js';
+import { adminUser } from '#lib/server/admin.js';
 import type { Actions, PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ cookies }) => {
-	if (!isAdmin(cookies)) return { authed: false as const };
+export const load: PageServerLoad = async ({ locals }) => {
+	const user = await locals.getUser();
+	if (!user) redirect(303, '/admin/login');
+	if (!(await adminUser(locals))) return { authed: false as const, email: user.email };
 
 	const [movies, daily] = await Promise.all([
 		supabase
@@ -27,15 +29,12 @@ export const load: PageServerLoad = async ({ cookies }) => {
 };
 
 export const actions: Actions = {
-	login: async ({ cookies, request }) => {
-		const password = String((await request.formData()).get('password') ?? '');
-		if (!logIn(cookies, password)) return fail(401, { wrong: true });
+	logout: async ({ locals }) => {
+		await locals.supabase.auth.signOut();
+		redirect(303, '/admin/login');
 	},
-	logout: async ({ cookies }) => {
-		logOut(cookies);
-	},
-	save: async ({ cookies, request }) => {
-		if (!isAdmin(cookies)) return fail(401);
+	save: async ({ locals, request }) => {
+		if (!(await adminUser(locals))) return fail(403);
 		let ids: unknown;
 		try {
 			ids = JSON.parse(String((await request.formData()).get('order')));

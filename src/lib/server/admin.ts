@@ -1,31 +1,10 @@
-import { createHash, timingSafeEqual } from 'node:crypto';
-import type { Cookies } from '@sveltejs/kit';
-import { ADMIN_PASSWORD } from '$app/env/private';
+import { supabase } from '#lib/server/supabase.js';
 
-const COOKIE = 'rt_admin';
-
-// The cookie holds a hash of the password, never the password itself
-const token = (password: string) =>
-	createHash('sha256').update(`rt-admin:${password}`).digest('hex');
-
-function valid(cookieToken: string | undefined) {
-	if (!ADMIN_PASSWORD || !cookieToken) return false;
-	const expected = Buffer.from(token(ADMIN_PASSWORD));
-	const given = Buffer.from(cookieToken);
-	return given.length === expected.length && timingSafeEqual(given, expected);
+// The Supabase project is shared with other apps, so being logged in isn't enough:
+// the account must also be listed in rt_admins.
+export async function adminUser(locals: App.Locals) {
+	const user = await locals.getUser();
+	if (!user) return null;
+	const { data } = await supabase.from('rt_admins').select('user_id').eq('user_id', user.id).maybeSingle();
+	return data ? user : null;
 }
-
-export const isAdmin = (cookies: Cookies) => valid(cookies.get(COOKIE));
-
-export function logIn(cookies: Cookies, password: string) {
-	if (!valid(token(password))) return false;
-	cookies.set(COOKIE, token(password), {
-		path: '/admin',
-		httpOnly: true,
-		sameSite: 'strict',
-		maxAge: 60 * 60 * 24 * 30
-	});
-	return true;
-}
-
-export const logOut = (cookies: Cookies) => cookies.delete(COOKIE, { path: '/admin' });

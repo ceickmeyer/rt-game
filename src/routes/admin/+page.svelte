@@ -167,11 +167,10 @@
 
 <main>
 	{#if !data.authed}
-		<form class="login" method="POST" action="?/login" use:enhance>
-			<input type="password" name="password" placeholder="Password" required />
-			<button>Log in</button>
-			{#if form && 'wrong' in form}<p>Wrong password</p>{/if}
-		</form>
+		<div class="denied">
+			<p>{data.email} isn't an admin for this game.</p>
+			<form method="POST" action="?/logout"><button class="quiet">Log out</button></form>
+		</div>
 	{:else}
 		<header>
 			<h1>Queue <span>{queue.length} upcoming</span></h1>
@@ -187,7 +186,7 @@
 				<button disabled={!dirty}>{dirty ? 'Save order' : 'Saved'}</button>
 				<button type="button" class="quiet" disabled={!dirty} onclick={() => invalidateAll()}>Revert</button>
 			</form>
-			<form method="POST" action="?/logout" use:enhance>
+			<form method="POST" action="?/logout">
 				<button class="quiet">Log out</button>
 			</form>
 		</header>
@@ -291,17 +290,10 @@
 		margin: 0 auto;
 		padding: 16px;
 	}
-	.login {
-		display: flex;
-		gap: 8px;
-		max-width: 320px;
-		margin: 30vh auto 0;
-		flex-wrap: wrap;
+	.denied {
+		margin-top: 30vh;
+		text-align: center;
 	}
-	.login input {
-		flex: 1;
-	}
-	.login p,
 	.error {
 		width: 100%;
 		color: #d33;
@@ -402,7 +394,6 @@
 		color: inherit;
 	}
 	input[type='number'],
-	input[type='password'],
 	select {
 		padding: 4px 6px;
 		background: var(--bg);

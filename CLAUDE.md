@@ -14,14 +14,14 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - Lib alias is `#lib/...` and needs a .js extension: import { points } from '#lib/score.js'
 - Env vars are declared in src/env.ts via defineEnvVars, then imported from
   '$app/env/private' / '$app/env/public' (NOT '$env/static/...')
-- browser/dev/building come from '$app/env'
+- browser/dev/building come from '$app/env'; the Handle type comes from '@sveltejs/kit/hooks'
 
 ## Data pipeline
 - rt_dump.py (MDBList API) writes rt_scores.json:
   { movies: [{ imdb_id, title, year, poster, critic, audience }], skipped: [] }
 - `npm run import` (scripts/import.mjs) upserts the JSON into rt_movies, then calls rt_queue_append
   so new movies land at the end of the queue in random order. Safe to re-run.
-- Schema: supabase/schema.sql (rt_movies + queue_pos, rt_daily, rt_movie_for_day, rt_queue_append, rt_set_queue). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
+- Schema: supabase/schema.sql (rt_movies + queue_pos, rt_daily, rt_admins, rt_movie_for_day, rt_queue_append, rt_set_queue). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
 
 ## Security model
 - rt_movies has RLS enabled with NO policies, so only the service-role client can read it
@@ -53,13 +53,17 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - Sounds are Web Audio blips (no files); unlock() must run inside the submit click
 
 ## Admin (/admin, src/routes/admin, auth in src/lib/server/admin.ts)
-- Password = ADMIN_PASSWORD env var (optional; unset disables /admin). Cookie holds a sha256 of it, path /admin
+- Supabase Auth email/password (same as the owner's other apps): src/hooks.server.ts sets locals.supabase
+  (@supabase/ssr, anon key, cookie session) and locals.getUser() (re-validates via getUser()).
+  /admin/login signs in server-side. The auth users are shared across apps, so admin also requires a row in
+  rt_admins (user_id). Check with adminUser(locals) in every admin load AND action.
+- Data reads/writes still use the service-role client; rt_ tables have RLS on with no policies
 - Shows assigned days (locked) and the upcoming queue with projected dates; ssr = false (dates use admin's local day)
 - Reorder via ↑/↓, position input, sorts applied to the selected rows only (they keep their slots) or the whole queue
 - Save sends the full ordered id list to rt_set_queue. Scores/gaps are hidden behind spoiler bars (the owner plays too)
 
 ## Env (.env locally, same names in Vercel project settings)
-- PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ADMIN_PASSWORD
+- PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
 
 ## Commands
 - npm run dev | npm run check | npm run build | npm run import

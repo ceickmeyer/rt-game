@@ -93,3 +93,16 @@ revoke execute on function rt_queue_append() from public, anon, authenticated;
 revoke execute on function rt_set_queue(text[]) from public, anon, authenticated;
 
 select rt_queue_append();
+
+-- Who can use /admin. The auth users are shared with other apps, so access is opt-in per account.
+create table if not exists rt_admins (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  created_at timestamptz default now()
+);
+
+alter table rt_admins enable row level security;
+
+-- Change the email if you sign in with a different account; add more rows for more admins.
+insert into rt_admins (user_id)
+select id from auth.users where email = 'cody.eickmeyer@gmail.com'
+on conflict do nothing;
