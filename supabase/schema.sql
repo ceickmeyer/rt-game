@@ -78,19 +78,7 @@ as $$
   where m.imdb_id = q.imdb_id;
 $$;
 
--- Saves the order from /admin: ids[1] gets position 1, and so on.
-create or replace function rt_set_queue(ids text[])
-returns void
-language sql
-as $$
-  update rt_movies m
-  set queue_pos = q.pos
-  from unnest(ids) with ordinality as q(imdb_id, pos)
-  where m.imdb_id = q.imdb_id;
-$$;
-
 revoke execute on function rt_queue_append() from public, anon, authenticated;
-revoke execute on function rt_set_queue(text[]) from public, anon, authenticated;
 
 select rt_queue_append();
 
@@ -106,3 +94,41 @@ alter table rt_admins enable row level security;
 insert into rt_admins (user_id)
 select id from auth.users where email = 'cody.eickmeyer@gmail.com'
 on conflict do nothing;
+
+-- /admin talks to Supabase straight from the browser (like tutoring-app), so these RLS policies
+-- are what keep it locked down: only signed-in accounts listed in rt_admins can read the movies
+-- and the schedule. Players never read these tables directly; the game's server uses the service role.
+drop policy if exists rt_admins_self on rt_admins;
+create policy rt_admins_self on rt_admins for select to authenticated
+  using (user_id = auth.uid());
+
+drop policy if exists rt_movies_admin_read on rt_movies;
+create policy rt_movies_admin_read on rt_movies for select to authenticated
+  using (exists (select 1 from rt_admins a where a.user_id = auth.uid()));
+
+drop policy if exists rt_daily_admin_read on rt_daily;
+create policy rt_daily_admin_read on rt_daily for select to authenticated
+  using (exists (select 1 from rt_admins a where a.user_id = auth.uid()));
+
+-- Saves the order from /admin: ids[1] gets position 1, and so on. Runs with owner rights,
+-- so it checks for an admin itself before touching anything.
+create or replace function rt_set_queue(ids text[])
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if not exists (select 1 from rt_admins where user_id = auth.uid()) then
+    raise exception 'not an admin';
+  end if;
+
+  update rt_movies m
+  set queue_pos = q.pos
+  from unnest(ids) with ordinality as q(imdb_id, pos)
+  where m.imdb_id = q.imdb_id;
+end;
+$$;
+
+revoke execute on function rt_set_queue(text[]) from public, anon;
+grant execute on function rt_set_queue(text[]) to authenticated;

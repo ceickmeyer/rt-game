@@ -1,18 +1,39 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
+	import { supabase } from '#lib/supabase.js';
 
-	let { form } = $props();
+	let email = $state('');
+	let password = $state('');
+	let error = $state<string | null>(null);
+	let loading = $state(false);
+
+	async function signIn(e: Event) {
+		e.preventDefault();
+		loading = true;
+		error = null;
+		const { error: err } = await supabase.auth.signInWithPassword({ email, password });
+		if (err) {
+			error = err.message;
+			loading = false;
+		}
+		// On success, onAuthStateChange in the admin layout handles the redirect
+	}
 </script>
 
 <svelte:head>
 	<title>RT Game · Admin</title>
 </svelte:head>
 
-<form method="POST" use:enhance>
-	<input type="email" name="email" placeholder="Email" autocomplete="email" required />
-	<input type="password" name="password" placeholder="Password" autocomplete="current-password" required />
-	<button>Log in</button>
-	{#if form?.error}<p>{form.error}</p>{/if}
+<form onsubmit={signIn}>
+	<input type="email" bind:value={email} placeholder="Email" autocomplete="email" required />
+	<input
+		type="password"
+		bind:value={password}
+		placeholder="Password"
+		autocomplete="current-password"
+		required
+	/>
+	<button disabled={loading}>{loading ? 'Signing in…' : 'Sign in'}</button>
+	{#if error}<p>{error}</p>{/if}
 </form>
 
 <style>
@@ -38,6 +59,9 @@
 		background: var(--fg);
 		border: 0;
 		cursor: pointer;
+	}
+	button:disabled {
+		opacity: 0.5;
 	}
 	p {
 		margin: 0;

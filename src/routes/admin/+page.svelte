@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import { invalidateAll } from '$app/navigation';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { localDay } from '#lib/day.js';
-
-	let { data, form } = $props();
+	import { supabase } from '#lib/supabase.js';
 
 	type Movie = {
 		imdb_id: string;
@@ -63,11 +60,83 @@
 		return out;
 	}
 
+	type Status = 'loading' | 'ready' | 'denied' | 'error';
+	let status = $state<Status>('loading');
+	let message = $state('');
+	let email = $state('');
+	let saving = $state(false);
+	let played = $state<{ day: string; movie: Movie }[]>([]);
+	let saved = $state<Movie[]>([]);
+
 	// Editable copy of the saved order; resets whenever fresh data arrives (load, save, revert)
-	let queue = $derived<Movie[]>(data.authed ? data.queue.map((m) => ({ ...m })) : []);
-	let dirty = $derived(
-		data.authed && queue.map((m) => m.imdb_id).join() !== data.queue.map((m) => m.imdb_id).join()
-	);
+	let queue = $derived<Movie[]>(saved.map((m) => ({ ...m })));
+	let dirty = $derived(queue.map((m) => m.imdb_id).join() !== saved.map((m) => m.imdb_id).join());
+
+	// PostgREST caps responses at 1000 rows, so page through everything
+	async function allMovies() {
+		const rows: (Movie & { queue_pos: number | null })[] = [];
+		for (let from = 0; ; from += 1000) {
+			const { data, error } = await supabase
+				.from('rt_movies')
+				.select('imdb_id, title, year, poster, critic, audience, queue_pos')
+				.order('queue_pos', { nullsFirst: false })
+				.order('imdb_id')
+				.range(from, from + 999);
+			if (error) throw error;
+			rows.push(...data);
+			if (data.length < 1000) return rows;
+		}
+	}
+
+	async function load() {
+		const {
+			data: { session }
+		} = await supabase.auth.getSession();
+		if (!session) return;
+		email = session.user.email ?? '';
+		try {
+			// RLS only lets accounts listed in rt_admins see these rows
+			const { data: admin } = await supabase
+				.from('rt_admins')
+				.select('user_id')
+				.eq('user_id', session.user.id)
+				.maybeSingle();
+			if (!admin) {
+				status = 'denied';
+				return;
+			}
+			const [movies, daily] = await Promise.all([
+				allMovies(),
+				supabase.from('rt_daily').select('day, imdb_id').order('day')
+			]);
+			if (daily.error) throw daily.error;
+			const byId = new Map(movies.map((m) => [m.imdb_id, m]));
+			const used = new Set(daily.data.map((d) => d.imdb_id));
+			played = daily.data.map((d) => ({ day: d.day, movie: byId.get(d.imdb_id)! }));
+			saved = movies.filter((m) => !used.has(m.imdb_id));
+			status = 'ready';
+		} catch (e) {
+			message = e instanceof Error ? e.message : String((e as { message?: string }).message ?? e);
+			status = 'error';
+		}
+	}
+
+	async function save() {
+		saving = true;
+		message = '';
+		const { error } = await supabase.rpc('rt_set_queue', { ids: queue.map((m) => m.imdb_id) });
+		saving = false;
+		if (error) message = error.message;
+		else await load(); // picks up any day that got assigned while editing
+	}
+
+	function revert() {
+		saved = [...saved];
+	}
+
+	$effect(() => {
+		load();
+	});
 	const selected = new SvelteSet<string>();
 	const revealed = new SvelteSet<string>();
 	let showNumbers = $state(false);
@@ -79,7 +148,7 @@
 	// Projected dates: the queue starts the day after the last assigned day, or today if today isn't assigned yet
 	let start = $derived.by(() => {
 		const today = localDay();
-		const last = data.authed ? data.played.at(-1)?.day : undefined;
+		const last = played.at(-1)?.day;
 		const [y, m, d] = (last && last >= today ? last : today).split('-').map(Number);
 		return new Date(y, m - 1, last && last >= today ? d + 1 : d);
 	});
@@ -166,31 +235,23 @@
 {/snippet}
 
 <main>
-	{#if !data.authed}
-		<div class="denied">
-			<p>{data.email} isn't an admin for this game.</p>
-			<form method="POST" action="?/logout"><button class="quiet">Log out</button></form>
+	{#if status === 'loading'}
+		<p class="center muted">Loading…</p>
+	{:else if status !== 'ready'}
+		<div class="center">
+			<p>{status === 'denied' ? `${email} isn't an admin for this game.` : message}</p>
+			<button class="quiet" onclick={() => supabase.auth.signOut()}>Log out</button>
 		</div>
 	{:else}
 		<header>
 			<h1>Queue <span>{queue.length} upcoming</span></h1>
-			<form
-				method="POST"
-				action="?/save"
-				use:enhance={() =>
-					async ({ result }) => {
-						if (result.type === 'success') await invalidateAll();
-					}}
-			>
-				<input type="hidden" name="order" value={JSON.stringify(queue.map((m) => m.imdb_id))} />
-				<button disabled={!dirty}>{dirty ? 'Save order' : 'Saved'}</button>
-				<button type="button" class="quiet" disabled={!dirty} onclick={() => invalidateAll()}>Revert</button>
-			</form>
-			<form method="POST" action="?/logout">
-				<button class="quiet">Log out</button>
-			</form>
+			<button disabled={!dirty || saving} onclick={save}>
+				{saving ? 'Saving…' : dirty ? 'Save order' : 'Saved'}
+			</button>
+			<button class="quiet" disabled={!dirty || saving} onclick={revert}>Revert</button>
+			<button class="quiet" onclick={() => supabase.auth.signOut()}>Log out</button>
 		</header>
-		{#if form && 'message' in form}<p class="error">{form.message}</p>{/if}
+		{#if message}<p class="error">{message}</p>{/if}
 
 		<div class="tools">
 			<div>
@@ -222,11 +283,11 @@
 			</div>
 		</div>
 
-		{#if data.played.length}
+		{#if played.length}
 			<details>
-				<summary>Already assigned ({data.played.length}), locked</summary>
+				<summary>Already assigned ({played.length}), locked</summary>
 				<ol>
-					{#each data.played as p (p.day)}
+					{#each played as p (p.day)}
 						<li><span class="muted">{p.day}</span> {p.movie.title} <span class="muted">{p.movie.year}</span></li>
 					{/each}
 				</ol>
@@ -290,7 +351,7 @@
 		margin: 0 auto;
 		padding: 16px;
 	}
-	.denied {
+	.center {
 		margin-top: 30vh;
 		text-align: center;
 	}
@@ -303,10 +364,6 @@
 		align-items: center;
 		gap: 8px;
 		flex-wrap: wrap;
-	}
-	header form {
-		display: flex;
-		gap: 8px;
 	}
 	h1 {
 		flex: 1;

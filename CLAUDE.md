@@ -15,6 +15,7 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - Env vars are declared in src/env.ts via defineEnvVars, then imported from
   '$app/env/private' / '$app/env/public' (NOT '$env/static/...')
 - browser/dev/building come from '$app/env'; the Handle type comes from '@sveltejs/kit/hooks'
+- Env vars marked `public: true` in src/env.ts (the PUBLIC_SUPABASE_* ones) import from '$app/env/public'
 
 ## Data pipeline
 - rt_dump.py (MDBList API) writes rt_scores.json:
@@ -52,13 +53,14 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - The whole reveal must stay under ~2s (glides capped at 550ms). Respect prefers-reduced-motion.
 - Sounds are Web Audio blips (no files); unlock() must run inside the submit click
 
-## Admin (/admin, src/routes/admin, auth in src/lib/server/admin.ts)
-- Supabase Auth email/password (same as the owner's other apps): src/hooks.server.ts sets locals.supabase
-  (@supabase/ssr, anon key, cookie session) and locals.getUser() (re-validates via getUser()).
-  /admin/login signs in server-side. The auth users are shared across apps, so admin also requires a row in
-  rt_admins (user_id). Check with adminUser(locals) in every admin load AND action.
-- Data reads/writes still use the service-role client; rt_ tables have RLS on with no policies
-- Shows assigned days (locked) and the upcoming queue with projected dates; ssr = false (dates use admin's local day)
+## Admin (/admin, src/routes/admin)
+- Auth works like the owner's tutoring-app: fully client-side. Browser supabase-js client (src/lib/supabase.ts,
+  anon key, session in localStorage), signInWithPassword on /admin/login, and admin/+layout.svelte
+  (ssr = false) redirects via getSession() + onAuthStateChange. No hooks.server.ts, no @supabase/ssr.
+- Security is RLS: the auth users are shared across apps, so policies only let accounts in rt_admins
+  read rt_movies / rt_daily, and rt_set_queue (security definer) checks rt_admins itself.
+  Anon has no policies, so players can never read scores directly.
+- Shows assigned days (locked) and the upcoming queue with projected dates (admin's local day)
 - Reorder via ↑/↓, position input, sorts applied to the selected rows only (they keep their slots) or the whole queue
 - Save sends the full ordered id list to rt_set_queue. Scores/gaps are hidden behind spoiler bars (the owner plays too)
 
