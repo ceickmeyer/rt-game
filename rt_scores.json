@@ -1,0 +1,4350 @@
+{
+  "movies": [
+    {
+      "imdb_id": "tt0111161",
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "critic": 89,
+      "audience": 98
+    },
+    {
+      "imdb_id": "tt0114369",
+      "title": "Se7en",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+      "critic": 84,
+      "audience": 95
+    },
+    {
+      "imdb_id": "tt0167404",
+      "title": "The Sixth Sense",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
+      "critic": 86,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0110912",
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+      "critic": 92,
+      "audience": 96
+    },
+    {
+      "imdb_id": "tt0137523",
+      "title": "Fight Club",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+      "critic": 81,
+      "audience": 96
+    },
+    {
+      "imdb_id": "tt0117381",
+      "title": "Primal Fear",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/qJf2TzE8nRTFbFMPJNW6c8mI0KU.jpg",
+      "critic": 77,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0099685",
+      "title": "GoodFellas",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
+      "critic": 93,
+      "audience": 97
+    },
+    {
+      "imdb_id": "tt0108052",
+      "title": "Schindler's List",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "critic": 98,
+      "audience": 97
+    },
+    {
+      "imdb_id": "tt0119217",
+      "title": "Good Will Hunting",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+      "critic": 97,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0147800",
+      "title": "10 Things I Hate About You",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg",
+      "critic": 72,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0109830",
+      "title": "Forrest Gump",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+      "critic": 75,
+      "audience": 95
+    },
+    {
+      "imdb_id": "tt0107290",
+      "title": "Jurassic Park",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/d9mtMGQDLANKieb9PbD3yK7xxzo.jpg",
+      "critic": 91,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0113277",
+      "title": "Heat",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+      "critic": 84,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0120616",
+      "title": "The Mummy",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/yhIsVvcUm7QxzLfT6HW2wLf5ajY.jpg",
+      "critic": 64,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0120382",
+      "title": "The Truman Show",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+      "critic": 94,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0120689",
+      "title": "The Green Mile",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+      "critic": 78,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0103064",
+      "title": "Terminator 2: Judgment Day",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+      "critic": 90,
+      "audience": 95
+    },
+    {
+      "imdb_id": "tt0120338",
+      "title": "Titanic",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+      "critic": 88,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0120815",
+      "title": "Saving Private Ryan",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "critic": 94,
+      "audience": 95
+    },
+    {
+      "imdb_id": "tt0162661",
+      "title": "Sleepy Hollow",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/1GuK965FLJxqUw9fd1pmvjbFAlv.jpg",
+      "critic": 71,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0169547",
+      "title": "American Beauty",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/wby9315QzVKdW9BonAefg8jGTTb.jpg",
+      "critic": 87,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0117665",
+      "title": "Sleepers",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/yUpiEk2EojS9ZEXb3nIQonQCYYF.jpg",
+      "critic": 76,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0108358",
+      "title": "Tombstone",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/wGFCvylul8iEQhJOKfwZGGvXMzA.jpg",
+      "critic": 76,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0120586",
+      "title": "American History X",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
+      "critic": 84,
+      "audience": 96
+    },
+    {
+      "imdb_id": "tt0108399",
+      "title": "True Romance",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/39lXk6ud6KiJgGbbWI2PUKS7y2.jpg",
+      "critic": 93,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0117571",
+      "title": "Scream",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+      "critic": 78,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0112573",
+      "title": "Braveheart",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/or1gBugydmjToAEq7OZY0owwFk.jpg",
+      "critic": 74,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0116367",
+      "title": "From Dusk Till Dawn",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/sV3kIAmvJ9tPz4Lq5fuf9LLMxte.jpg",
+      "critic": 65,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0175880",
+      "title": "Magnolia",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg",
+      "critic": 82,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0107688",
+      "title": "The Nightmare Before Christmas",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg",
+      "critic": 95,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0163651",
+      "title": "American Pie",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/5P68by2Thn8wHAziyWGEw2O7hco.jpg",
+      "critic": 62,
+      "audience": 61
+    },
+    {
+      "imdb_id": "tt0110357",
+      "title": "The Lion King",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+      "critic": 92,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0111257",
+      "title": "Speed",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg",
+      "critic": 95,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0106519",
+      "title": "Carlito's Way",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/g6D7mjQtndu768cusGmoEQY9fTB.jpg",
+      "critic": 84,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0101540",
+      "title": "Cape Fear",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/meJZAAuVcjic2ipvbOPz5UlE4P9.jpg",
+      "critic": 77,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0103772",
+      "title": "Basic Instinct",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/76Ts0yoHk8kVQj9MMnoMixhRWoh.jpg",
+      "critic": 56,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt0112641",
+      "title": "Casino",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/gziIkUSnYuj9ChCi8qOu2ZunpSC.jpg",
+      "critic": 79,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0119488",
+      "title": "L.A. Confidential",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg",
+      "critic": 99,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0116695",
+      "title": "Jerry Maguire",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/lABvGN7fDk5ifnwZoxij6G96t2w.jpg",
+      "critic": 86,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0114709",
+      "title": "Toy Story",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+      "critic": 100,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0119174",
+      "title": "The Game",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/4UOa079915QjiTA2u5hT2yKVgUu.jpg",
+      "critic": 77,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0118715",
+      "title": "The Big Lebowski",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
+      "critic": 79,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0119654",
+      "title": "Men in Black",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
+      "critic": 91,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0106489",
+      "title": "A Bronx Tale",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/7Obzc6svsHSR1za0LqzkpwFsEhw.jpg",
+      "critic": 97,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0117913",
+      "title": "A Time to Kill",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/w8UCke112E9jrhjKcwG32kyhTx5.jpg",
+      "critic": 66,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0099785",
+      "title": "Home Alone",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
+      "critic": 66,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0106677",
+      "title": "Dazed and Confused",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/msG9awbLhVZwv1Eh9Ge7SofMexW.jpg",
+      "critic": 94,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0110148",
+      "title": "Interview with the Vampire",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/t7NU8IcmcNBrlunCxiycX9JV7Rp.jpg",
+      "critic": 67,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0114746",
+      "title": "Twelve Monkeys",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/gt3iyguaCIw8DpQZI1LIN5TohM2.jpg",
+      "critic": 88,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0118749",
+      "title": "Boogie Nights",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/2hVSN9yOfoI8EUTqcVW6zCIyQ1G.jpg",
+      "critic": 91,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0107614",
+      "title": "Mrs. Doubtfire",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/shHrSmXS5140o6sQzgzXxn3KqSm.jpg",
+      "critic": 71,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0104952",
+      "title": "My Cousin Vinny",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
+      "critic": 85,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0119643",
+      "title": "Meet Joe Black",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/fDPAjvfPMomkKF7cMRmL5Anak61.jpg",
+      "critic": 48,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0116922",
+      "title": "Lost Highway",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/5POhfNeFPIi4VUNwCTaK85sh98r.jpg",
+      "critic": 70,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0104257",
+      "title": "A Few Good Men",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/rLOk4z9zL1tTukIYV56P94aZXKk.jpg",
+      "critic": 85,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0103874",
+      "title": "Bram Stoker's Dracula",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/wpRrdm6g8zWtJnzVqME5QwSKkn7.jpg",
+      "critic": 69,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0112471",
+      "title": "Before Sunrise",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
+      "critic": 100,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0102685",
+      "title": "Point Break",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/tlbERIghrQ4oofqlbF7H0K0EYnx.jpg",
+      "critic": 68,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0105695",
+      "title": "Unforgiven",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/54roTwbX9fltg85zjsmrooXAs12.jpg",
+      "critic": 96,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0118971",
+      "title": "The Devil's Advocate",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/5ZzBGpxy55OQzHxKVY11IpY6a0o.jpg",
+      "critic": 65,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0151804",
+      "title": "Office Space",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/iEmTwOkUaLziMQCUZii5wPQBIAO.jpg",
+      "critic": 82,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0120611",
+      "title": "Blade",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/oWT70TvbsmQaqyphCZpsnQR7R32.jpg",
+      "critic": 59,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0120201",
+      "title": "Starship Troopers",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/cxCmv23O7p3hyHwqoktHYkZcGsY.jpg",
+      "critic": 72,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0114558",
+      "title": "Strange Days",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/rY5BrDRcYAKE0BYmmT66YG6Uy5Q.jpg",
+      "critic": 71,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0113497",
+      "title": "Jumanji",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/bdHG5Mo83VPobeZZdlSz0Y7HQHB.jpg",
+      "critic": 56,
+      "audience": 63
+    },
+    {
+      "imdb_id": "tt0104691",
+      "title": "The Last of the Mohicans",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/qzJMPWRtZveBkxXOv3ucWhoJuyj.jpg",
+      "critic": 88,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0100157",
+      "title": "Misery",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
+      "critic": 86,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0116629",
+      "title": "Independence Day",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/p0BPQGSPoSa8Ml0DAf2mB2kCU0R.jpg",
+      "critic": 77,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0101272",
+      "title": "The Addams Family",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/qFf8anju5f2epI0my8RdwwIXFIP.jpg",
+      "critic": 67,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0110475",
+      "title": "The Mask",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg",
+      "critic": 82,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0120794",
+      "title": "The Prince of Egypt",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/2xUjYwL6Ol7TLJPPKs7sYW5PWLX.jpg",
+      "critic": 79,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0119008",
+      "title": "Donnie Brasco",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/xtKLvpOfARi1XVm8u2FTdhY5Piq.jpg",
+      "critic": 88,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0112384",
+      "title": "Apollo 13",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/tVeKscCm2fY1xDXZk8PgnZ87h9S.jpg",
+      "critic": 92,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0120655",
+      "title": "Dogma",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
+      "critic": 72,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0117008",
+      "title": "Matilda",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/wYoDpWInsBEVSmWStnRH06ddoyk.jpg",
+      "critic": 89,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0117060",
+      "title": "Mission: Impossible",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg",
+      "critic": 65,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0119282",
+      "title": "Hercules",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/dK9rNoC97tgX3xXg5zdxFisdfcp.jpg",
+      "critic": 83,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0099653",
+      "title": "Ghost",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/w9RaPHov8oM5cnzeE27isnFMsvS.jpg",
+      "critic": 74,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0109686",
+      "title": "Dumb and Dumber",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg",
+      "critic": 69,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0100405",
+      "title": "Pretty Woman",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/oVKX1Pt1q7jXTkTk51mu2S0sAB0.jpg",
+      "critic": 65,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0119177",
+      "title": "Gattaca",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/eSKr5Fl1MEC7zpAXaLWBWSBjgJq.jpg",
+      "critic": 82,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0104694",
+      "title": "A League of Their Own",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/f9BtX6wYOwJUyfUr4vyeT3COz6m.jpg",
+      "critic": 82,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0100814",
+      "title": "Tremors",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/cA4ggkZ3r1d5r9hOAUWC8x5ul2i.jpg",
+      "critic": 88,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0119396",
+      "title": "Jackie Brown",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/rOUx7qg4KmEh1juEDwqzbDSL1Nr.jpg",
+      "critic": 88,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0134119",
+      "title": "The Talented Mr. Ripley",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/6ojHgqtIR41O2qLKa7LFUVj0cZa.jpg",
+      "critic": 85,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0099487",
+      "title": "Edward Scissorhands",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/e0FqKFvGPdQNWG8tF9cZBtev9Em.jpg",
+      "critic": 92,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0100802",
+      "title": "Total Recall",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/wVbeL6fkbTKSmNfalj4VoAUUqJv.jpg",
+      "critic": 80,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0100935",
+      "title": "Wild at Heart",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/uLUFI5sJIfWrBUWB2Y1dEuyvvVy.jpg",
+      "critic": 66,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0099348",
+      "title": "Dances with Wolves",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/hw0ZEHAaTqTxSXGVwUFX7uvanSA.jpg",
+      "critic": 87,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0120363",
+      "title": "Toy Story 2",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg",
+      "critic": 100,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0099810",
+      "title": "The Hunt for Red October",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/yVl7zidse4KiWtGMqHFtZCx4X3N.jpg",
+      "critic": 88,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0110322",
+      "title": "Legends of the Fall",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/89DRDb6mmNkIekqSeAzz13faQDt.jpg",
+      "critic": 61,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0120812",
+      "title": "Rush Hour",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/nwPhAsfnb7f46bZkWLG7IRP5HXr.jpg",
+      "critic": 62,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0113540",
+      "title": "Kids",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/8qV8hUVCUnFIQKewzlhaFWhdszK.jpg",
+      "critic": 47,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0118887",
+      "title": "Cop Land",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/qzR7m6kUhsbdid3xRK2jTXjyNmG.jpg",
+      "critic": 75,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0119822",
+      "title": "As Good as It Gets",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/xXxuJPNUDZ0vjsAXca0O5p3leVB.jpg",
+      "critic": 86,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0103074",
+      "title": "Thelma & Louise",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/7D2DqmIKpPlkCU0RLVdlKLKR7XZ.jpg",
+      "critic": 87,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0119978",
+      "title": "The Rainmaker",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/twLGHXPjQtS8UyVGp5GXmhJiTM7.jpg",
+      "critic": 82,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0147612",
+      "title": "Happiness",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/rYfUcEV88Z3gENrfYTE6i8yBkDr.jpg",
+      "critic": 84,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0120623",
+      "title": "A Bug's Life",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/Ah3J9OJVc2CNCuH2zMydXy9fmIC.jpg",
+      "critic": 92,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0100150",
+      "title": "Miller's Crossing",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/mbFUr8hTOzrBCgAekAVRiXYgj2H.jpg",
+      "critic": 93,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0140352",
+      "title": "The Insider",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/3BYhikNhkWALAbpAdoL0rcBrl5A.jpg",
+      "critic": 96,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0105323",
+      "title": "Scent of a Woman",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/4adI7IaveWb7EidYXfLb3MK3CgO.jpg",
+      "critic": 82,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0103776",
+      "title": "Batman Returns",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+      "critic": 81,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0113118",
+      "title": "Friday",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/3Ya1RurP2NqaYoiok4DmfO41rCC.jpg",
+      "critic": 77,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0120863",
+      "title": "The Thin Red Line",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/seMydAaoxQP6F0xbE1jOcTmn5Jr.jpg",
+      "critic": 80,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0115685",
+      "title": "The Birdcage",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/4IpC35BoA5aRO0Q1DpFGJ8iKKYq.jpg",
+      "critic": 85,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0103639",
+      "title": "Aladdin",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/eLFfl7vS8dkeG1hKp5mwbm37V83.jpg",
+      "critic": 96,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0120762",
+      "title": "Mulan",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/jAbexAtB0aSfP5Ay4TpWHARyVnG.jpg",
+      "critic": 92,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0172493",
+      "title": "Girl, Interrupted",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/dOBdatHIVppvmRFw2z7bf9VKJr9.jpg",
+      "critic": 53,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0106977",
+      "title": "The Fugitive",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/b3rEtLKyOnF89mcK75GXDXdmOEf.jpg",
+      "critic": 96,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0101414",
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg",
+      "critic": 95,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0117500",
+      "title": "The Rock",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
+      "critic": 76,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0106308",
+      "title": "Army of Darkness",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/xsgTuAtR2zSH8Umg3jWZcZjlDpe.jpg",
+      "critic": 68,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0119229",
+      "title": "Grosse Pointe Blank",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/7lQ0MSNQqBTYpXTTZL82u1n95Z3.jpg",
+      "critic": 82,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0129387",
+      "title": "There's Something About Mary",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/slJD1Dvnsf15LoeqhERsyzisAdn.jpg",
+      "critic": 84,
+      "audience": 61
+    },
+    {
+      "imdb_id": "tt0119094",
+      "title": "Face/Off",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg",
+      "critic": 93,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0108037",
+      "title": "The Sandlot",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/7PYqz0viEuW8qTvuGinUMjDWMnj.jpg",
+      "critic": 66,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0129167",
+      "title": "The Iron Giant",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/k1Cv5CHJvqGWK1xJDUJz8DojFEy.jpg",
+      "critic": 96,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0106856",
+      "title": "Falling Down",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/7ujqyF96Zg3rfrsh9M0cEF0Yzqj.jpg",
+      "critic": 77,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0107048",
+      "title": "Groundhog Day",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+      "critic": 93,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0099088",
+      "title": "Back to the Future Part III",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/crzoVQnMzIrRfHtQw0tLBirNfVg.jpg",
+      "critic": 79,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0118655",
+      "title": "Austin Powers: International Man of Mystery",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/5uD4dxNX8JKFjWKYMHyOsqhi5pN.jpg",
+      "critic": 72,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0108550",
+      "title": "What's Eating Gilbert Grape",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/8FxWgsfDNosewo7H65oE4QkOb7g.jpg",
+      "critic": 90,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0099871",
+      "title": "Jacob's Ladder",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/ufLcHIi1aXjjH8MediAMvnwDsVI.jpg",
+      "critic": 71,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0112461",
+      "title": "The Basketball Diaries",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/AhvO1GGDPIgN0hOqZEgaFCbswMK.jpg",
+      "critic": 46,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0115736",
+      "title": "Bound",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
+      "critic": 86,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0139239",
+      "title": "Go",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/7UzD5Dmu3jqb2ls4Lnb4SYQqbYm.jpg",
+      "critic": 91,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0177789",
+      "title": "Galaxy Quest",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/fZXSwgZknp81vmciTb86rw0MejV.jpg",
+      "critic": 90,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0099077",
+      "title": "Awakenings",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg",
+      "critic": 81,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0119099",
+      "title": "Fallen",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/sWGqNkWVr6JWL4grHFFGV3datuQ.jpg",
+      "critic": 43,
+      "audience": 72
+    },
+    {
+      "imdb_id": "tt0111503",
+      "title": "True Lies",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/pqdvCBDThAOjlA0XBzbNm7GvwpU.jpg",
+      "critic": 77,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0110632",
+      "title": "Natural Born Killers",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/fEKZwT91gxvkAoyPgpNXo8W5fu0.jpg",
+      "critic": 52,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0120669",
+      "title": "Fear and Loathing in Las Vegas",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/tisNLcMkxryU2zxhi0PiyDFqhm0.jpg",
+      "critic": 50,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0112851",
+      "title": "Desperado",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/e3gwpBeXpvGZsxUya9zNym5QXrw.jpg",
+      "critic": 71,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0166896",
+      "title": "The Straight Story",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/tT9cMiVDdtlcdZxOoFy3VRmEoKk.jpg",
+      "critic": 95,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0137363",
+      "title": "Arlington Road",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/4yYHyZuyTTQaEZuHKS7561jXjtR.jpg",
+      "critic": 62,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0128442",
+      "title": "Rounders",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/mqbMwYGwIChnaCO55h7v8DG8Wwy.jpg",
+      "critic": 63,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0120889",
+      "title": "What Dreams May Come",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/78wCdphUzeb528wLZw2W0fn7yGB.jpg",
+      "critic": 51,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0120660",
+      "title": "Enemy of the State",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/x9pXrMKLsBGGOFyyZ0Gwt9YpVub.jpg",
+      "critic": 71,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0107818",
+      "title": "Philadelphia",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/tFe5Yoo5zT495okA49bq1vPPkiV.jpg",
+      "critic": 81,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0122690",
+      "title": "Ronin",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/AirrhRJjHwytOV0pdLu7YZ4DEyr.jpg",
+      "critic": 70,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0144117",
+      "title": "The Boondock Saints",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/wtLUmkWg41xFLpvmUWAN1mm65f6.jpg",
+      "critic": 26,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0113409",
+      "title": "In the Mouth of Madness",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/msh4tEUzbnEqlHcFOUH4O0Zti8r.jpg",
+      "critic": 61,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0120855",
+      "title": "Tarzan",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/bTvHlcqiOjGa3lFtbrTLTM3zasY.jpg",
+      "critic": 90,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0116583",
+      "title": "The Hunchback of Notre Dame",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/dmMBtXuFzZzLYgeQXkOkg98w2Ak.jpg",
+      "critic": 80,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0111282",
+      "title": "Stargate",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/4T6Po0XnZlevmhfPh3ZfEs5butR.jpg",
+      "critic": 53,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0118617",
+      "title": "Anastasia",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/bppGWGA8zq1sRvTdDJnUzVW9GcH.jpg",
+      "critic": 83,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0105265",
+      "title": "A River Runs Through It",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/aVP45oS2cBL4WtZ1kB7r8uarruB.jpg",
+      "critic": 80,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0120601",
+      "title": "Being John Malkovich",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/31FGQu3OnwdmS4COquENe0vMZc0.jpg",
+      "critic": 94,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0101921",
+      "title": "Fried Green Tomatoes",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/g71l1vbJwyAAYk8zKCkIQQ58qcb.jpg",
+      "critic": 77,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0117666",
+      "title": "Sling Blade",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/rioWUWXPFNSjwm9NO2aau9x0wlP.jpg",
+      "critic": 96,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0132477",
+      "title": "October Sky",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/umWrXCIWdcYPf764ruvMRCpG3cA.jpg",
+      "critic": 90,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0116483",
+      "title": "Happy Gilmore",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/4RnCeRzvI1xk5tuNWjpDKzSnJDk.jpg",
+      "critic": 66,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0112740",
+      "title": "Crimson Tide",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/21nqRJ6ofEgVvEl68J4O9V26Xzy.jpg",
+      "critic": 89,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0102138",
+      "title": "JFK",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/r0VWVTYlqdRCK5ZoOdNnHdqM2gt.jpg",
+      "critic": 85,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0118771",
+      "title": "Breakdown",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/m3VB59ppr1RlpxNUYRUfZTgjgU.jpg",
+      "critic": 83,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0120780",
+      "title": "Out of Sight",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/v49q7AMR3pB4M762woWB1NYMCLF.jpg",
+      "critic": 94,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0105665",
+      "title": "Twin Peaks: Fire Walk with Me",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/mxsGXqetGnirf99qapYd5MMY1VL.jpg",
+      "critic": 67,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0104348",
+      "title": "Glengarry Glen Ross",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/zcaEDx8KlVfh4vKfMNLhiSi5Oz4.jpg",
+      "critic": 95,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0120324",
+      "title": "A Simple Plan",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/wO2gH7DMqpMeHlj5QmDhW4IkgAr.jpg",
+      "critic": 91,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0139809",
+      "title": "The Thirteenth Floor",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/7oaie3ZBc9UuWZLF24crro1pone.jpg",
+      "critic": 29,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt0118789",
+      "title": "Buffalo '66",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/fxzXFzbSGNA52NHQCMqQiwzMIQw.jpg",
+      "critic": 77,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0138704",
+      "title": "Pi",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/fJA22FjlAW8rzrOw9Mwanl6oTc9.jpg",
+      "critic": 88,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0102266",
+      "title": "The Last Boy Scout",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/glPswihcZYoAQ4YM2uJF4UACy8T.jpg",
+      "critic": 48,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0112864",
+      "title": "Die Hard: With a Vengeance",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/buqmCdFQEWwEpL3agGgg2GVjN2d.jpg",
+      "critic": 60,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0120102",
+      "title": "Seven Years in Tibet",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/qm87HHUew8ICtUCM4asO3gFYvby.jpg",
+      "critic": 57,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0120631",
+      "title": "EverAfter",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/9TspO5dThMBioF0DFrvy6YqrngH.jpg",
+      "critic": 91,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0105793",
+      "title": "Wayne's World",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/fHwZnFNWR7PaS9t5EBwTvGPeoYQ.jpg",
+      "critic": 79,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0116365",
+      "title": "The Frighteners",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/zcJbCMwFLJdn5OLjhYwMVaSB32R.jpg",
+      "critic": 65,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0106226",
+      "title": "The Age of Innocence",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/5Tuyt26v7qNR8Cl3m7ZRx36rduf.jpg",
+      "critic": 88,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0101507",
+      "title": "Boyz n the Hood",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/kaS8BkTZESnkoB5i1zRQ02FIRGk.jpg",
+      "critic": 93,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0104797",
+      "title": "Malcolm X",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/o2s9ow0uRRm1BcF3teznk5twd90.jpg",
+      "critic": 89,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0100685",
+      "title": "State of Grace",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/dNMeRLY3MeY2FFeh639plHai3F1.jpg",
+      "critic": 86,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0138097",
+      "title": "Shakespeare in Love",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/zdW7jdzPi4J9KZR3TyY2jn3Xh5e.jpg",
+      "critic": 93,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0108071",
+      "title": "The Secret Garden",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/zf6h5dJ7wVG7LqMO9dhHGHVejzj.jpg",
+      "critic": 89,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0120789",
+      "title": "Pleasantville",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/sjnRihb0OdmtD5GBe5lfdfBjSxo.jpg",
+      "critic": 85,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0109707",
+      "title": "Ed Wood",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/n8SrO3WbyuY2b6KazogqbQF348C.jpg",
+      "critic": 92,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0120784",
+      "title": "Payback",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/8Bqlv2kbOyZFqfiPNgzdBscqYPn.jpg",
+      "critic": 56,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0099423",
+      "title": "Die Hard 2",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/ybki0UWO3OPhaM6MSniuKC7sy1R.jpg",
+      "critic": 68,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0101761",
+      "title": "The Doors",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/x1LM3dzGuG6xOz0aT2e71o11vhu.jpg",
+      "critic": 58,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0112579",
+      "title": "The Bridges of Madison County",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/aCBrhOQjhG397GLkEZ49zReQEKX.jpg",
+      "critic": 90,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0107616",
+      "title": "Much Ado About Nothing",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/tvltGP6vYOkHdURag0jPSjhPUAV.jpg",
+      "critic": 90,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0120188",
+      "title": "Three Kings",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/fClJQW8xn8wHOFqoA4jUn0PZh1f.jpg",
+      "critic": 94,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0107131",
+      "title": "Homeward Bound: The Incredible Journey",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/el6dJEpK97OJRQiQhuiSGk2jkV5.jpg",
+      "critic": 87,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0105151",
+      "title": "The Player",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/tZ3kDut2dhFVGkWNEn9xoCHCNAx.jpg",
+      "critic": 97,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0117802",
+      "title": "Swingers",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/rRjWk68kU3a2so4lgr3TKB7Y5vA.jpg",
+      "critic": 87,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0112818",
+      "title": "Dead Man Walking",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/eShxyjhWoFl3BwsuEmVsr4nLaMZ.jpg",
+      "critic": 97,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0107206",
+      "title": "In the Line of Fire",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/3NvOFpmyECI3DNExYMtFIRcGMsu.jpg",
+      "critic": 96,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0101889",
+      "title": "The Fisher King",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/hwIYw22HmAUMobV4zsX69MgfVUz.jpg",
+      "critic": 84,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0117887",
+      "title": "That Thing You Do!",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/9RmZu33qHdyZFGLfhEOmkTjdNEu.jpg",
+      "critic": 93,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0117731",
+      "title": "Star Trek: First Contact",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/iqhHe893Vcf07jNkNQ31tu85dKG.jpg",
+      "critic": 93,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0109445",
+      "title": "Clerks",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/9IiSgiq4h4siTIS9H3o4nZ3h5L9.jpg",
+      "critic": 90,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0108002",
+      "title": "Rudy",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/fAbfTCRpjHe2rprXBly55KL1dL9.jpg",
+      "critic": 80,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0101410",
+      "title": "Barton Fink",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/oDkp5iClJ9WKJGtKHz8BydodHC3.jpg",
+      "critic": 90,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0109642",
+      "title": "Dolores Claiborne",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/yqY5h9kI456xXRWv6u9t0Axn9CS.jpg",
+      "critic": 87,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0106611",
+      "title": "Cool Runnings",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/6fXuGEb7EqGmAeUodxm7l5ELPZ.jpg",
+      "critic": 75,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0106364",
+      "title": "Batman: Mask of the Phantasm",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/hT4ehUteagUrhUOHAtmYiY7mp5l.jpg",
+      "critic": 83,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0118607",
+      "title": "Amistad",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/6QqNyIHKow0jngiQgTNBOBrLILM.jpg",
+      "critic": 78,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0110478",
+      "title": "Maverick",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/mTVbGGi5PIexmxVzeyFd2RYKwfM.jpg",
+      "critic": 67,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0107808",
+      "title": "A Perfect World",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/kWX2CYM5TbWaZwll4ysh7OjVUmJ.jpg",
+      "critic": 77,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0124315",
+      "title": "The Cider House Rules",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/qAECAgqjSFRVZzEEGbFAZqZNiDh.jpg",
+      "critic": 72,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0106469",
+      "title": "Bound by Honor",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/8t9ojZ7fyn5iTqKCVjGvJ6nMacN.jpg",
+      "critic": 64,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0126886",
+      "title": "Election",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/fbo0IYzBc32dD5SjFzKIgfp4O4F.jpg",
+      "critic": 92,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0120885",
+      "title": "Wag the Dog",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/kAwOj7t8ZeaniTFtLWVSKO79JxX.jpg",
+      "critic": 86,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0114323",
+      "title": "Safe",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/2O71QsBkbqdLqQdx2yuNpJ4pFPq.jpg",
+      "critic": 87,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0105435",
+      "title": "Sneakers",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/l2pIGwCvpZEpBuMb55YBl6A04Jv.jpg",
+      "critic": 80,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0113670",
+      "title": "A Little Princess",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/9V4bAVEskSNbEqjVI0YmeuB0n8I.jpg",
+      "critic": 97,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0112817",
+      "title": "Dead Man",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/jX3wGBVoYoAY3IixBpwYk1fjT4z.jpg",
+      "critic": 70,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0125664",
+      "title": "Man on the Moon",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/msOZS07xRIFnapwp3fprGbKEAfT.jpg",
+      "critic": 64,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0114814",
+      "title": "The Usual Suspects",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+      "critic": 87,
+      "audience": 96
+    },
+    {
+      "imdb_id": "tt0116282",
+      "title": "Fargo",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg",
+      "critic": 95,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0118884",
+      "title": "Contact",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/bCpMIywuNZeWt3i5UMLEIc0VSwM.jpg",
+      "critic": 69,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0099674",
+      "title": "The Godfather Part III",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+      "critic": 67,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0109506",
+      "title": "The Crow",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/rMMB3v6jYHjsvXRNJYESacoTD7j.jpg",
+      "critic": 88,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0120768",
+      "title": "The Negotiator",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/dUMHEymATOGbs2K3E4dmNSVBgFQ.jpg",
+      "critic": 75,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0104940",
+      "title": "The Muppet Christmas Carol",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/ssrV29QSVVJuemBHho0Qx7pFYak.jpg",
+      "critic": 78,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0128445",
+      "title": "Rushmore",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/hSJ6swahAuZ8wM96lHDTwQPXUvZ.jpg",
+      "critic": 90,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0113198",
+      "title": "A Goofy Movie",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/bycmMhO3iIoEDzP768sUjq2RV4T.jpg",
+      "critic": 64,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0168122",
+      "title": "Pirates of Silicon Valley",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/rdAMdi7iFN7EP0zuaPp3mESBOH8.jpg",
+      "critic": 89,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0114694",
+      "title": "Tommy Boy",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/jeEM8v1OA9u6F5NC2lzXD04Ls1U.jpg",
+      "critic": 40,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0112453",
+      "title": "Balto",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/dCVcdb5oxDizqFLz0F7TE60NoC9.jpg",
+      "critic": 54,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0171804",
+      "title": "Boys Don't Cry",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/eB505ycEhFVfMwGglIzXNUyKAIs.jpg",
+      "critic": 90,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0107554",
+      "title": "Menace II Society",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/guvPiEOeXwROpfCb2LkHkVEvOck.jpg",
+      "critic": 84,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0165798",
+      "title": "Ghost Dog: The Way of the Samurai",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/gjcl07r9zgQ9tVo9alyHmysPFfX.jpg",
+      "critic": 84,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0103241",
+      "title": "What About Bob?",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/pFCrGGGhV5xeAdvEysv6aSv8T13.jpg",
+      "critic": 71,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0106246",
+      "title": "Alive",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/uQACcCZqd7WCTRin9xRIW5gr1bd.jpg",
+      "critic": 63,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0107050",
+      "title": "Grumpy Old Men",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/iMY7yFn4gMvGaQYMGWnyX2QgvHZ.jpg",
+      "critic": 67,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0110074",
+      "title": "The Hudsucker Proxy",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/xBQBr6Q1OTivouBK66oFgy86n03.jpg",
+      "critic": 61,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0119051",
+      "title": "The Edge",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/zplJqfuUyqzW0D4jX3W1afl0d7b.jpg",
+      "critic": 63,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0238414",
+      "title": "Mickey's Once Upon a Christmas",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/jHl15NgLPBdUsXgIZzrgBB1QJcc.jpg",
+      "critic": 50,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0110367",
+      "title": "Little Women",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/1ZzH1XMcKAe5NdrKL5MfcqZHHsZ.jpg",
+      "critic": 92,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0106387",
+      "title": "Benny & Joon",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/iX4xSwwLk4ypTiwFnfx0TSctsJV.jpg",
+      "critic": 75,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0166792",
+      "title": "Scooby-Doo on Zombie Island",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/7EdvFUGvT5Pn8rUFRKCrdUzNthf.jpg",
+      "critic": 89,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0104573",
+      "title": "Juice",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/hfXFPMhNjLnCugBHMN0nrtKW7Ra.jpg",
+      "critic": 82,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0108330",
+      "title": "This Boy's Life",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/pRMSZfen1Cv1eqwDbtxCBpBqxnU.jpg",
+      "critic": 76,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0117110",
+      "title": "Muppet Treasure Island",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/k4KW2CUkzDKaCy4H4cS02cO8gvV.jpg",
+      "critic": 80,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0119683",
+      "title": "Les Misérables",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/3TOgmlIY8X3WjIjvU7Z0jqeNkyU.jpg",
+      "critic": 77,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0105046",
+      "title": "Of Mice and Men",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/qAHLUMZyoW3iwj2b01B2nKcePTA.jpg",
+      "critic": 97,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0107507",
+      "title": "Manhattan Murder Mystery",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/zrzBIlMyAP7Ac9W5qAy5ssAUdK4.jpg",
+      "critic": 94,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0119349",
+      "title": "The Ice Storm",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/3a6uLta7K8Dzojps4RoJAPHD0km.jpg",
+      "critic": 86,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0133189",
+      "title": "SLC Punk",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/7u3IZPuIOPjICi55K7cJgzV3e3B.jpg",
+      "critic": 59,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0119256",
+      "title": "Hard Eight",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/1l5UaoP25Ak8PWCKIULQz70yF03.jpg",
+      "critic": 82,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0108551",
+      "title": "What's Love Got to Do with It",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/btC4819GhihmkCELqO3qgepNGos.jpg",
+      "critic": 97,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0118528",
+      "title": "12 Angry Men",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/whDdYx3lh1LHTN0VlPFt51fX29g.jpg",
+      "critic": 93,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0113870",
+      "title": "Murder in the First",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/1S3xY4HKAXLNvvKXRECMrbVnGQR.jpg",
+      "critic": 56,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0116477",
+      "title": "Hamlet",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/ilurgUOp6SCl4cuhfjctj1qxlfZ.jpg",
+      "critic": 95,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0196931",
+      "title": "Scooby-Doo! and the Witch's Ghost",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/ljEEGImypBFGoXU7eZSTo4vE9nC.jpg",
+      "critic": 50,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0114478",
+      "title": "Smoke",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/1WMUaTQaj2dQrhsPI3Px0OR9eTF.jpg",
+      "critic": 89,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0114906",
+      "title": "Welcome to the Dollhouse",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/fsMMOVto87pvUQyozOF9CaT9aMR.jpg",
+      "critic": 94,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0112681",
+      "title": "Citizen X",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/mr3lIjSRhXGVP2o9HY3P9PX2KsH.jpg",
+      "critic": 86,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0109348",
+      "title": "Bullets Over Broadway",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/mY9D1oCLeDKNMdUO8EV7MoCZ3up.jpg",
+      "critic": 95,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0104466",
+      "title": "Husbands and Wives",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/mb6Hmns0PP2Me9TYpLE9M3GHt7v.jpg",
+      "critic": 93,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0101698",
+      "title": "Defending Your Life",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/flXJ4AnKYq8DH1f1TmQ4QrqSwsB.jpg",
+      "critic": 92,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0158371",
+      "title": "Sweet and Lowdown",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/23S5qa8j3ajYnERcYCqMLfSeOvw.jpg",
+      "critic": 77,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0119485",
+      "title": "Kundun",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/yvdFRDoQIQ5PBk4u8x8gJT8NJAw.jpg",
+      "critic": 76,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0169590",
+      "title": "The Batman/Superman Movie: World's Finest",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/dQxwNGQ6pQLCUE5vaI9PwIZK6UC.jpg",
+      "critic": 80,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0116905",
+      "title": "Lone Star",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/lBxY8znsRoqa9Dy2NCe8I6GPsRm.jpg",
+      "critic": 91,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0105226",
+      "title": "Red Rock West",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/ewofUEqU3Gpr7WSgSz3TEVPIfBg.jpg",
+      "critic": 95,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0102943",
+      "title": "Slacker",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/f7Iov2nd0XX9bp2laQEPYPEhisc.jpg",
+      "critic": 82,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0106881",
+      "title": "Fearless",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/sFhzvwgv04VUmedB7pOO4cMP9xq.jpg",
+      "critic": 86,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0118111",
+      "title": "Waiting for Guffman",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/zuArI6EBpV6mExrvfnyidoOtzdf.jpg",
+      "critic": 91,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0114594",
+      "title": "Swimming with Sharks",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/eMRiIJIEyMLjWjktIqjNfzs9jGX.jpg",
+      "critic": 76,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0161100",
+      "title": "The Wood",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/yEWMSJHkzMLgsTgsvR5TxuP3lBt.jpg",
+      "critic": 61,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0107282",
+      "title": "The Joy Luck Club",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/s1Sk0hhVARNs7i9wqRHqbCriu8n.jpg",
+      "critic": 86,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0102388",
+      "title": "The Man in the Moon",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/57r0TXlqV5GIn4h0Htgh81OZou9.jpg",
+      "critic": 91,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0120176",
+      "title": "The Spanish Prisoner",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/cwkWlWfFrvH6WW6ovX5gfGHo7ks.jpg",
+      "critic": 89,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0104073",
+      "title": "Deep Cover",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/etr2mCm7gMufAJkSLuB23XocDtd.jpg",
+      "critic": 87,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0110684",
+      "title": "Nobody's Fool",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/xyAXFy6mOfgZcVWbceCeuTYadeq.jpg",
+      "critic": 91,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0100486",
+      "title": "Reversal of Fortune",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/jEmFeHPsoyHk6RRZslKzC5NVFad.jpg",
+      "critic": 92,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0105130",
+      "title": "Peter's Friends",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/8ly4EB83JlOkjBD6wOTU0ReXMQN.jpg",
+      "critic": 65,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0112757",
+      "title": "The Cure",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/3WN1H5NzLOjhY9AP848v8WPc9uu.jpg",
+      "critic": 50,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0110428",
+      "title": "The Madness of King George",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/1dTSY023ZyBbgVSKDRuA6JLGSnZ.jpg",
+      "critic": 91,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0172396",
+      "title": "The End of the Affair",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/xTp5cyp6qG0YTdI4AEz4ytjODOQ.jpg",
+      "critic": 66,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0100142",
+      "title": "Metropolitan",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/852ZwTRj9tRxkGOT0Pu0Ep8yimk.jpg",
+      "critic": 94,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0119080",
+      "title": "Eve's Bayou",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/33yTPcGSv7eo3FVlb7XKACHl1M8.jpg",
+      "critic": 84,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0105017",
+      "title": "Noises Off...",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/rrRNSwC0sfQUs0g9MVmDaJdP4Pg.jpg",
+      "critic": 61,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0102592",
+      "title": "One False Move",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/x5xCkGw4jutMcc8nmWLKNzbDKht.jpg",
+      "critic": 93,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0103130",
+      "title": "Trust",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/9wE7LuIkvuPfr4Ye6fMqPXHqaiE.jpg",
+      "critic": 80,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0120321",
+      "title": "Smoke Signals",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/dZ6smtO2cEm3nxVhWscYfKS0mYX.jpg",
+      "critic": 90,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0101748",
+      "title": "Dogfight",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/1sEJy723hW629jzzX8H5k5MTVMq.jpg",
+      "critic": 87,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0107007",
+      "title": "Gettysburg",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/k0XKdT3QbycMB8f2H7CEZVx2t4m.jpg",
+      "critic": 82,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0109504",
+      "title": "Crooklyn",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/iFqe07F78SO0SIBzWcK4I5MwNvP.jpg",
+      "critic": 79,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0113749",
+      "title": "Mallrats",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/2ip0sGIMPN0XEN6q3lQIoaNI6tP.jpg",
+      "critic": 58,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0102536",
+      "title": "Night on Earth",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/ktejUHCo6c8DekpOtR3uSb6oDXr.jpg",
+      "critic": 77,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0108122",
+      "title": "Short Cuts",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/mbNTvbtWfV4soyErimDTdX67OAr.jpg",
+      "critic": 95,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0108065",
+      "title": "Searching for Bobby Fischer",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/oAJpHkMpfXiFY9F3HocIz9fhHLc.jpg",
+      "critic": 98,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0113987",
+      "title": "Nixon",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/cz2MTGr2wpDZLirgV2rGHBdA2t3.jpg",
+      "critic": 76,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0102975",
+      "title": "Star Trek VI: The Undiscovered Country",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/tvTOJD7Gz668GLy2nNdLRQvpPsv.jpg",
+      "critic": 84,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0120684",
+      "title": "Gods and Monsters",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/awvJH3NtXoStsjAtXKr99hfuVaG.jpg",
+      "critic": 96,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0103759",
+      "title": "Bad Lieutenant",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/mVJ2mXykqq3t2v1nuouf1P10g0d.jpg",
+      "critic": 78,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0117318",
+      "title": "The People vs. Larry Flynt",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/sAgHn7ys6TiVXBDTZ0UBEjinIUk.jpg",
+      "critic": 88,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0115639",
+      "title": "Beautiful Girls",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/sHcx1fBmrtZYvFmUywU0d5cvIFd.jpg",
+      "critic": 78,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0158983",
+      "title": "South Park: Bigger, Longer & Uncut",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/tS0PedvA2mFO9VCHYwQpaU1K36U.jpg",
+      "critic": 81,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0174856",
+      "title": "The Hurricane",
+      "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/original/zhnxjsNnnpsBMF5V1H7Pzkec45Y.jpg",
+      "critic": 82,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0113627",
+      "title": "Leaving Las Vegas",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/wIfP6uLXD9Ptu68SyRx8WuSNNSK.jpg",
+      "critic": 91,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0113677",
+      "title": "Living in Oblivion",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/b54xDk98oWtEtAso9sj1wjaZDDH.jpg",
+      "critic": 86,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0113819",
+      "title": "Mighty Aphrodite",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/ice135yQZp4iX2SgCmd90nKgS5j.jpg",
+      "critic": 78,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0118954",
+      "title": "Deconstructing Harry",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/i7Z5DdznqANJUjqWISEFu9bw6J7.jpg",
+      "critic": 73,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0118842",
+      "title": "Chasing Amy",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/tqydORBcNlQxy3ijgSpPurgDHM2.jpg",
+      "critic": 86,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0110932",
+      "title": "Quiz Show",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/yoGJo1h3Hl2exXPVcG9UXWDENtX.jpg",
+      "critic": 97,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0110116",
+      "title": "Immortal Beloved",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/lkqz2R5pjXeDaiIjR3Z6JTGjtg6.jpg",
+      "critic": 57,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0117958",
+      "title": "Trees Lounge",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/swOo6PSYDVgwSce9faxPBS9V4ss.jpg",
+      "critic": 81,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0143127",
+      "title": "Batman & Mr. Freeze: SubZero",
+      "year": 1998,
+      "poster": "https://image.tmdb.org/t/p/original/kjjz8mVNrwNUa9uz8IMnqS79rxj.jpg",
+      "critic": 92,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0115678",
+      "title": "Big Night",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/8AJGSDyrj3Dz2B57n1ZB4qNPbmJ.jpg",
+      "critic": 96,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0107091",
+      "title": "Heart and Souls",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/jnMBqMSUwa0Lzh9X1Fwo4f8AMl6.jpg",
+      "critic": 58,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0113862",
+      "title": "Mr. Holland's Opus",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/kBmwWeSN3ajnYHZ3dSybEobxEPI.jpg",
+      "critic": 76,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0109842",
+      "title": "Fresh",
+      "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/original/uXRIIUzjDZZdWR2cUzPJ9eAqaHv.jpg",
+      "critic": 88,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0114117",
+      "title": "Persuasion",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/10hycdhFLq3M3y0ONxIMSiY8Mrs.jpg",
+      "critic": 87,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0067866",
+      "title": "El Topo",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/fKoNBTATc94rUYLq8VyypS24LUw.jpg",
+      "critic": 80,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0081506",
+      "title": "Shogun Assassin",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/t376p5q8zvhyQ2FOroytJsRvlL8.jpg",
+      "critic": 82,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0062861",
+      "title": "Danger: Diabolik",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/ozU1Qgu3CqWg2MWz8God3P6PoF3.jpg",
+      "critic": 67,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt1534085",
+      "title": "Beyond the Black Rainbow",
+      "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/original/uhomcCTQ3lO8L6mLhkCMypsnroO.jpg",
+      "critic": 61,
+      "audience": 53
+    },
+    {
+      "imdb_id": "tt0051378",
+      "title": "Elevator to the Gallows",
+      "year": 1958,
+      "poster": "https://image.tmdb.org/t/p/original/jgeZS97po2luaeElfUh07VAbVfV.jpg",
+      "critic": 93,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0037691",
+      "title": "Fallen Angel",
+      "year": 1945,
+      "poster": "https://image.tmdb.org/t/p/original/8WLGwhpJWaSu8W8geauaaWpJC8A.jpg",
+      "critic": 85,
+      "audience": 61
+    },
+    {
+      "imdb_id": "tt0101252",
+      "title": "29th Street",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/49qYMV5re5pug1ybxNQ4VUp6Owv.jpg",
+      "critic": 75,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0078480",
+      "title": "Watership Down",
+      "year": 1978,
+      "poster": "https://image.tmdb.org/t/p/original/q9ZcNxfquJbMTd6UfhAlJbmLBts.jpg",
+      "critic": 83,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0364569",
+      "title": "Oldboy",
+      "year": 2003,
+      "poster": "https://image.tmdb.org/t/p/original/pWDtjs568ZfOTMbURQBYuT4Qxka.jpg",
+      "critic": 82,
+      "audience": 94
+    },
+    {
+      "imdb_id": "tt0078841",
+      "title": "Being There",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/yFHi5wiCB45loSa1D1O6KAFMC3A.jpg",
+      "critic": 95,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0049406",
+      "title": "The Killing",
+      "year": 1956,
+      "poster": "https://image.tmdb.org/t/p/original/A6VzUPcADZGYdGHlVdWvpMNDF5d.jpg",
+      "critic": 96,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0057427",
+      "title": "The Trial",
+      "year": 1962,
+      "poster": "https://image.tmdb.org/t/p/original/4qDUe5HqB8pXNplSBlsoyVjNP3r.jpg",
+      "critic": 84,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0055018",
+      "title": "The Innocents",
+      "year": 1961,
+      "poster": "https://image.tmdb.org/t/p/original/idqvLBmlEHUITMnQ0EJ6Yb5TpVw.jpg",
+      "critic": 95,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0074811",
+      "title": "The Tenant",
+      "year": 1976,
+      "poster": "https://image.tmdb.org/t/p/original/4Qhzb1ICFMqE3isWoln497qSH7n.jpg",
+      "critic": 85,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0066993",
+      "title": "The Devils",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/y1k7eiOFc6fzm8XeTa1kNGx6JIs.jpg",
+      "critic": 56,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0096163",
+      "title": "The Vanishing",
+      "year": 1988,
+      "poster": "https://image.tmdb.org/t/p/original/eE5bbuRJluooG2MjEAsLEYyuJoa.jpg",
+      "critic": 96,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0085794",
+      "title": "The King of Comedy",
+      "year": 1982,
+      "poster": "https://image.tmdb.org/t/p/original/m24EbHxT9NGYEkOlu29YcLOgjgK.jpg",
+      "critic": 89,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0066516",
+      "title": "Valerie and Her Week of Wonders",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/lY0IkdouazLBpPYot8dsPAsJqHK.jpg",
+      "critic": 81,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0266308",
+      "title": "Battle Royale",
+      "year": 2000,
+      "poster": "https://image.tmdb.org/t/p/original/aLGKAQKgzWpJ6egyWzzC11jXBRJ.jpg",
+      "critic": 90,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0040636",
+      "title": "The Naked City",
+      "year": 1948,
+      "poster": "https://image.tmdb.org/t/p/original/rex4oaiSCD8UQg9204R6hQcFrX9.jpg",
+      "critic": 86,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0068675",
+      "title": "Hannie Caulder",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/jIjlG2lFDzBimhsPzuSnBXywWpE.jpg",
+      "critic": 60,
+      "audience": 56
+    },
+    {
+      "imdb_id": "tt0079688",
+      "title": "Over the Edge",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/aFJJF4GLQTEcg9qwW0deRJFhskU.jpg",
+      "critic": 85,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0119167",
+      "title": "Funny Games",
+      "year": 1997,
+      "poster": "https://image.tmdb.org/t/p/original/48uCNgdyYIoN4ayWjTpLaqSDcWI.jpg",
+      "critic": 73,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0072913",
+      "title": "Master of the Flying Guillotine",
+      "year": 1976,
+      "poster": "https://image.tmdb.org/t/p/original/upa8qI25kJrrQHgYz66IO2ccvoH.jpg",
+      "critic": 90,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0071249",
+      "title": "Bring Me the Head of Alfredo Garcia",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/gRWVf3InNlIlFT3WB9MnFdOwcYQ.jpg",
+      "critic": 77,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0052997",
+      "title": "The League of Gentlemen",
+      "year": 1960,
+      "poster": "https://image.tmdb.org/t/p/original/6lJvpL5Z3qZxegmJHUpjGsWROtW.jpg",
+      "critic": 83,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0080117",
+      "title": "The Wanderers",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/p8vxJHlCbmmnUX3p8bEAzXZfcIT.jpg",
+      "critic": 89,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0109550",
+      "title": "Dark Waters",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/wDcyo7b0XniwJlgGESKiqZ7xNFe.jpg",
+      "critic": 71,
+      "audience": 54
+    },
+    {
+      "imdb_id": "tt0083190",
+      "title": "Thief",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/bpjRGwfYJ71bU0hNhLIz7g3t6Oy.jpg",
+      "critic": 80,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0085780",
+      "title": "The Keep",
+      "year": 1983,
+      "poster": "https://image.tmdb.org/t/p/original/yd9wU3oajNxwaFHQ02rtTBuSFJD.jpg",
+      "critic": 42,
+      "audience": 43
+    },
+    {
+      "imdb_id": "tt0099528",
+      "title": "The Exorcist III",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/275gw2JA5YCk10o6n84rZdZBycM.jpg",
+      "critic": 60,
+      "audience": 58
+    },
+    {
+      "imdb_id": "tt0082307",
+      "title": "The Beyond",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/kMSZHq9VYQV1FCbM8nz2zrZShzx.jpg",
+      "critic": 75,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0082933",
+      "title": "Possession",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/A9bnRn05riOKWftvQlLKa2gl51n.jpg",
+      "critic": 87,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0062138",
+      "title": "Point Blank",
+      "year": 1967,
+      "poster": "https://image.tmdb.org/t/p/original/xvZc8EvB7tNPHM9VdmNA19EiwqU.jpg",
+      "critic": 93,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0077147",
+      "title": "The Rutles: All You Need Is Cash",
+      "year": 1978,
+      "poster": "https://image.tmdb.org/t/p/original/uZJ5r5mYH1uRYa6aW5JFpjHasrQ.jpg",
+      "critic": 92,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0066849",
+      "title": "Blood on Satan's Claw",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/hp3xBv3sXmswAubsouWJ1V9Dfpi.jpg",
+      "critic": 73,
+      "audience": 59
+    },
+    {
+      "imdb_id": "tt0290673",
+      "title": "Irreversible",
+      "year": 2002,
+      "poster": "https://image.tmdb.org/t/p/original/rxeDxo8FvZpLu6iplNpxdtAVnfu.jpg",
+      "critic": 60,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0096256",
+      "title": "They Live",
+      "year": 1988,
+      "poster": "https://image.tmdb.org/t/p/original/ngnybFTuopfbfmmEeX9jjBQQmF6.jpg",
+      "critic": 86,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0067927",
+      "title": "Vanishing Point",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/1ThnpFx2G2HPhecvODGFEQxfOpO.jpg",
+      "critic": 62,
+      "audience": 82
+    },
+    {
+      "imdb_id": "tt0061655",
+      "title": "The Fearless Vampire Killers",
+      "year": 1967,
+      "poster": "https://image.tmdb.org/t/p/original/nqk9oTXRaukSyhFAwBGGgEnLl43.jpg",
+      "critic": 73,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0090180",
+      "title": "To Live and Die in L.A.",
+      "year": 1985,
+      "poster": "https://image.tmdb.org/t/p/original/2iW3pSihBIhXjnBQmUJ0mAiZbB5.jpg",
+      "critic": 89,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0084719",
+      "title": "The New York Ripper",
+      "year": 1982,
+      "poster": "https://image.tmdb.org/t/p/original/pi2Ft9zZWr6MCO4TmmxRzqJilSk.jpg",
+      "critic": 25,
+      "audience": 53
+    },
+    {
+      "imdb_id": "tt0087075",
+      "title": "The Company of Wolves",
+      "year": 1984,
+      "poster": "https://image.tmdb.org/t/p/original/2g2YPws1MiEWTodUE8u3qOf78XS.jpg",
+      "critic": 85,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0071222",
+      "title": "Black Christmas",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/ym0QcbrKNujzDyAU1IHGYUdRWub.jpg",
+      "critic": 73,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt1029234",
+      "title": "Martyrs",
+      "year": 2008,
+      "poster": "https://image.tmdb.org/t/p/original/sT5ITTlTcnPOeFzHEu5j0hTZUvD.jpg",
+      "critic": 66,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0079271",
+      "title": "Hardcore",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/g6m9xBTAzxXVhdJ624s9BLK9o6.jpg",
+      "critic": 80,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0063285",
+      "title": "Witchfinder General",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/5QuF8YbNtOpLbcTlEFSAokUv5sp.jpg",
+      "critic": 94,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0072285",
+      "title": "Thriller: A Cruel Picture",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/pMYgdygJZ6oBpnC3dWrluevlZOt.jpg",
+      "critic": 56,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt0056279",
+      "title": "Night of the Eagle",
+      "year": 1962,
+      "poster": "https://image.tmdb.org/t/p/original/zhsE6gYKJjgRCaV7MF0fCsErHzm.jpg",
+      "critic": 88,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0059095",
+      "title": "The 10th Victim",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/qwXXxwnN1yj5XiZBUrdazBRMqw1.jpg",
+      "critic": 82,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0079482",
+      "title": "Long Weekend",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/roZ7DGi30lA1O4zhtPwBh6q8JV6.jpg",
+      "critic": 89,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0066434",
+      "title": "THX 1138",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/pPyEXW7h2SJRjTsHZqrIlXxOgW9.jpg",
+      "critic": 72,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt1316536",
+      "title": "The Loved Ones",
+      "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/original/ydsLYdSiPSIL1LOWWYu7VCvDTT8.jpg",
+      "critic": 98,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0080025",
+      "title": "Time After Time",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/A4SXZxQempzTUReRlQiFaYc6KaC.jpg",
+      "critic": 88,
+      "audience": 72
+    },
+    {
+      "imdb_id": "tt0063715",
+      "title": "Spirits of the Dead",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/9HmCwfPG7URPSXSrmEAFN65VoWE.jpg",
+      "critic": 86,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt0069293",
+      "title": "Solaris",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/pgqj7QoBPWFLLKtLEpPmFYFRMgB.jpg",
+      "critic": 92,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt2359024",
+      "title": "Blue Ruin",
+      "year": 2014,
+      "poster": "https://image.tmdb.org/t/p/original/q0itEsso2drJXqH9kfdidxIT5dF.jpg",
+      "critic": 96,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt1954315",
+      "title": "Borgman",
+      "year": 2013,
+      "poster": "https://image.tmdb.org/t/p/original/kasPhXDk4BI4FUS3ku5Y4GrgBJY.jpg",
+      "critic": 87,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0065143",
+      "title": "The Bird with the Crystal Plumage",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/dpALRkwodEIT7TGX9SqTgwVNn0i.jpg",
+      "critic": 85,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0076706",
+      "title": "Short Eyes",
+      "year": 1977,
+      "poster": "https://image.tmdb.org/t/p/original/mtgLebvVu9WLfkJXgcPyigcrozY.jpg",
+      "critic": 92,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0104693",
+      "title": "Laws of Gravity",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/zFN3C7flx1xj3dxGEAsSK7Uz7bB.jpg",
+      "critic": 100,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0084408",
+      "title": "Next of Kin",
+      "year": 1982,
+      "poster": "https://image.tmdb.org/t/p/original/oIgyJIr0TJaolj6hj8PLoGMpxVg.jpg",
+      "critic": 100,
+      "audience": 51
+    },
+    {
+      "imdb_id": "tt3416742",
+      "title": "What We Do in the Shadows",
+      "year": 2014,
+      "poster": "https://image.tmdb.org/t/p/original/a2rD3i3DBMeYbA34rBv6z3B9S3a.jpg",
+      "critic": 96,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0114660",
+      "title": "Things to Do in Denver When You're Dead",
+      "year": 1995,
+      "poster": "https://image.tmdb.org/t/p/original/3LxYzYybOVpnw0juCSlNL5cj8NK.jpg",
+      "critic": 35,
+      "audience": 72
+    },
+    {
+      "imdb_id": "tt3395184",
+      "title": "Spring",
+      "year": 2014,
+      "poster": "https://image.tmdb.org/t/p/original/ghg3kgKDCFcX5ps1BXlgENNd3po.jpg",
+      "critic": 85,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt1462667",
+      "title": "Outrage",
+      "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/original/s6VVl5WKuGIDlSAm8hgvTsrzODK.jpg",
+      "critic": 82,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt1172994",
+      "title": "The House of the Devil",
+      "year": 2009,
+      "poster": "https://image.tmdb.org/t/p/original/4abKUbc9IbsndbaY1hacN1iPM0Y.jpg",
+      "critic": 86,
+      "audience": 63
+    },
+    {
+      "imdb_id": "tt0099819",
+      "title": "I Love You to Death",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/8LdWJLUfEa5JeUJ7SljJQMIJikZ.jpg",
+      "critic": 58,
+      "audience": 62
+    },
+    {
+      "imdb_id": "tt0076150",
+      "title": "Alice, Sweet Alice",
+      "year": 1976,
+      "poster": "https://image.tmdb.org/t/p/original/izawwwy80RH7U7YKkdV1OpdPohZ.jpg",
+      "critic": 71,
+      "audience": 61
+    },
+    {
+      "imdb_id": "tt0059956",
+      "title": "Viva Maria!",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/hAArxvmVALRNf7fmWdzT7dVFz8k.jpg",
+      "critic": 60,
+      "audience": 47
+    },
+    {
+      "imdb_id": "tt0083336",
+      "title": "Wolfen",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/hb4TJBeElGyIa7tmF2466iwwItB.jpg",
+      "critic": 72,
+      "audience": 48
+    },
+    {
+      "imdb_id": "tt0062885",
+      "title": "The Devil Rides Out",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/p1AWO8PIMfT6XGHV8uaa8erencj.jpg",
+      "critic": 96,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0076683",
+      "title": "The Sentinel",
+      "year": 1977,
+      "poster": "https://image.tmdb.org/t/p/original/zoLuOdAD63prJP0o3Z0zRaAfwXE.jpg",
+      "critic": 45,
+      "audience": 44
+    },
+    {
+      "imdb_id": "tt1441395",
+      "title": "Under the Skin",
+      "year": 2014,
+      "poster": "https://image.tmdb.org/t/p/original/55wmcXJIDYITr7JDijJTdvwSaAv.jpg",
+      "critic": 83,
+      "audience": 55
+    },
+    {
+      "imdb_id": "tt2366608",
+      "title": "Lost River",
+      "year": 2015,
+      "poster": "https://image.tmdb.org/t/p/original/z00sPSV2Fue6tDPAhtn1mehOHc2.jpg",
+      "critic": 30,
+      "audience": 38
+    },
+    {
+      "imdb_id": "tt0065571",
+      "title": "The Conformist",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/nLJjFRqIJAK8qz0OKYnpKCblZNK.jpg",
+      "critic": 98,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0056732",
+      "title": "The Exterminating Angel",
+      "year": 1962,
+      "poster": "https://image.tmdb.org/t/p/original/qqZXHvBFxUpo8Pfbyvgh4SYMiWm.jpg",
+      "critic": 94,
+      "audience": 92
+    },
+    {
+      "imdb_id": "tt0080904",
+      "title": "Humanoids from the Deep",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/jVqNWDvTIwjcHsMyNSUT0sfGrq9.jpg",
+      "critic": 45,
+      "audience": 41
+    },
+    {
+      "imdb_id": "tt0071203",
+      "title": "Belladonna of Sadness",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/2okYZVVw7RdMwlOKcAJsQ7Nsrpr.jpg",
+      "critic": 90,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0083931",
+      "title": "Son of the White Mare",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/cYYYIfBFG5nszjDk5xea4MQHyDS.jpg",
+      "critic": 100,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0077889",
+      "title": "Magic",
+      "year": 1978,
+      "poster": "https://image.tmdb.org/t/p/original/nkDUIHyr7MlDRgbHv98YbH0jvYr.jpg",
+      "critic": 87,
+      "audience": 65
+    },
+    {
+      "imdb_id": "tt0054632",
+      "title": "Last Year at Marienbad",
+      "year": 1961,
+      "poster": "https://image.tmdb.org/t/p/original/syIJCqiSkGRJTlyaBtyI5jqPtE7.jpg",
+      "critic": 93,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0099578",
+      "title": "The First Power",
+      "year": 1990,
+      "poster": "https://image.tmdb.org/t/p/original/6FNwKIHiALTv6Lt16pAVtP8L1tc.jpg",
+      "critic": 23,
+      "audience": 46
+    },
+    {
+      "imdb_id": "tt0056736",
+      "title": "L'Eclisse",
+      "year": 1962,
+      "poster": "https://image.tmdb.org/t/p/original/oXoe0Fp92Yw3mMJ9Vq0hPlaMELg.jpg",
+      "critic": 87,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0070544",
+      "title": "Fantastic Planet",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/prq0j1S0K07UjwLZLF6oMGflRUI.jpg",
+      "critic": 91,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0071615",
+      "title": "The Holy Mountain",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/oaOyrFD4ZyZZwjO8wc4b12XHcgZ.jpg",
+      "critic": 85,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt1235166",
+      "title": "A Prophet",
+      "year": 2009,
+      "poster": "https://image.tmdb.org/t/p/original/x9Jb8kewBHPzjTtgCQvoQoDsy4d.jpg",
+      "critic": 96,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0067541",
+      "title": "Wake in Fright",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/5XwMDn2acQZ3CHuJ3EDXLg348G3.jpg",
+      "critic": 97,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0053459",
+      "title": "Eyes Without a Face",
+      "year": 1960,
+      "poster": "https://image.tmdb.org/t/p/original/8y7Z9Gvcq52uOlJlUWyn2epGGRd.jpg",
+      "critic": 97,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0059229",
+      "title": "Juliet of the Spirits",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/NbN10moPWQiiIKDJsC7A3j4Mcy.jpg",
+      "critic": 79,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0056210",
+      "title": "Mafioso",
+      "year": 1962,
+      "poster": "https://image.tmdb.org/t/p/original/36abgVBo67TI2rPEIWqMRh3oQ1Z.jpg",
+      "critic": 96,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0086589",
+      "title": "Suburbia",
+      "year": 1984,
+      "poster": "https://image.tmdb.org/t/p/original/vydIE7nizxO04ER9EcDdbdaHh8c.jpg",
+      "critic": 93,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0063850",
+      "title": "if....",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/oqlpAGq4aXhc6ODtxBcGM1SEoIp.jpg",
+      "critic": 90,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0102789",
+      "title": "Ricochet",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/5isHYEcUY0nE90uMhkGrs1nnal.jpg",
+      "critic": 75,
+      "audience": 52
+    },
+    {
+      "imdb_id": "tt0083284",
+      "title": "Escape to Victory",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/3j6H0dnbvjNXLK1l9nKguXw5vvO.jpg",
+      "critic": 70,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0067140",
+      "title": "Duck, You Sucker",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/nWmAtZf83qpOai0fzehf7Hn1S3R.jpg",
+      "critic": 92,
+      "audience": 83
+    },
+    {
+      "imdb_id": "tt0480025",
+      "title": "This Is England",
+      "year": 2007,
+      "poster": "https://image.tmdb.org/t/p/original/6ZVx7wLrlgSKxkYC2CRg6Zek0fG.jpg",
+      "critic": 93,
+      "audience": 90
+    },
+    {
+      "imdb_id": "tt0158714",
+      "title": "Lady Snowblood",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/wkcbaqCoYEXDUnSQ6NTnB2C7H05.jpg",
+      "critic": 100,
+      "audience": 85
+    },
+    {
+      "imdb_id": "tt0067959",
+      "title": "Walkabout",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/24vooYt5StgtgcQObVr1GHuM5gy.jpg",
+      "critic": 86,
+      "audience": 86
+    },
+    {
+      "imdb_id": "tt0060955",
+      "title": "Seconds",
+      "year": 1966,
+      "poster": "https://image.tmdb.org/t/p/original/5G3q3OvulFTnFdiouaZdD8wjtIc.jpg",
+      "critic": 79,
+      "audience": 87
+    },
+    {
+      "imdb_id": "tt0079871",
+      "title": "Scum",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/7jgzCmnF4QwRGbv2ubK9VIOAkJp.jpg",
+      "critic": 89,
+      "audience": 91
+    },
+    {
+      "imdb_id": "tt0059043",
+      "title": "The Collector",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/iMiih5FGHwpUCAaJAIkYKl5Hffi.jpg",
+      "critic": 81,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0067487",
+      "title": "The Night Evelyn Came Out of the Grave",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/sUMDXrKxPRZeNQgKDG5bl3FQ2Zd.jpg",
+      "critic": 40,
+      "audience": 38
+    },
+    {
+      "imdb_id": "tt0066122",
+      "title": "Deep End",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/8pZxUJTgjerjxuifSU13B8pXAJB.jpg",
+      "critic": 90,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0071994",
+      "title": "Phantom of the Paradise",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/qDOtGWeSQNwB3dG7Amt1K0JW0az.jpg",
+      "critic": 83,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0061955",
+      "title": "The Bride Wore Black",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/iP7kuo3tMyR2hJfqBsssiPnEoik.jpg",
+      "critic": 85,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0058997",
+      "title": "Bunny Lake Is Missing",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/zsZ2PAMMyBhkn5OSC8Qnror2KCA.jpg",
+      "critic": 86,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0052556",
+      "title": "The Lovers",
+      "year": 1958,
+      "poster": "https://image.tmdb.org/t/p/original/5WxZp3XpCnK1EQ6D8XASbpCkrzO.jpg",
+      "critic": 91,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0070300",
+      "title": "Lemora: A Child's Tale of the Supernatural",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/cdV3CGZ88oglZWRdCRYoNY69izZ.jpg",
+      "critic": 86,
+      "audience": 57
+    },
+    {
+      "imdb_id": "tt0058567",
+      "title": "Blood and Black Lace",
+      "year": 1964,
+      "poster": "https://image.tmdb.org/t/p/original/zYCQjsdktEvlWTRap836iI5paEL.jpg",
+      "critic": 75,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0086541",
+      "title": "Videodrome",
+      "year": 1983,
+      "poster": "https://image.tmdb.org/t/p/original/qqqkiZSU9EBGZ1KiDmfn07S7qvv.jpg",
+      "critic": 83,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0086216",
+      "title": "Rumble Fish",
+      "year": 1983,
+      "poster": "https://image.tmdb.org/t/p/original/nwIUWs7cexC8Wk9c6ey8nFltAZd.jpg",
+      "critic": 77,
+      "audience": 80
+    },
+    {
+      "imdb_id": "tt0076162",
+      "title": "House",
+      "year": 1977,
+      "poster": "https://image.tmdb.org/t/p/original/ryZ3DdZPvXVCv9qRCtVRfmNbYAH.jpg",
+      "critic": 90,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0069019",
+      "title": "Don't Torture a Duckling",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/ehH1xFUdcLyEeJMBfW5FVeT0Flf.jpg",
+      "critic": 88,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0091474",
+      "title": "Manhunter",
+      "year": 1986,
+      "poster": "https://image.tmdb.org/t/p/original/6rb24x39vV8n5301IelC8rCPJTH.jpg",
+      "critic": 82,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt1416801",
+      "title": "Kill the Irishman",
+      "year": 2011,
+      "poster": "https://image.tmdb.org/t/p/original/yjDvqAMyFlesBtWNUUZMgglo78y.jpg",
+      "critic": 63,
+      "audience": 67
+    },
+    {
+      "imdb_id": "tt0066249",
+      "title": "The Private Life of Sherlock Holmes",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/vQSYu0DXkqTOEfWF21AzaqXxYCZ.jpg",
+      "critic": 87,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0077474",
+      "title": "The Driver",
+      "year": 1978,
+      "poster": "https://image.tmdb.org/t/p/original/zSpk2OH4MCgLGB06XDv4YUfBTv6.jpg",
+      "critic": 80,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0058898",
+      "title": "Alphaville",
+      "year": 1965,
+      "poster": "https://image.tmdb.org/t/p/original/fFJP3D5fJDFxN7ChqSye1DZ0fTL.jpg",
+      "critic": 92,
+      "audience": 81
+    },
+    {
+      "imdb_id": "tt0068416",
+      "title": "What Have You Done to Solange?",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/eMwcPwaqPckzR0c312v0eCyfQ5U.jpg",
+      "critic": 71,
+      "audience": 77
+    },
+    {
+      "imdb_id": "tt0038975",
+      "title": "The Spiral Staircase",
+      "year": 1946,
+      "poster": "https://image.tmdb.org/t/p/original/4k0k9f59g901GWzw0gfFT7f5in.jpg",
+      "critic": 86,
+      "audience": 79
+    },
+    {
+      "imdb_id": "tt0091860",
+      "title": "River's Edge",
+      "year": 1986,
+      "poster": "https://image.tmdb.org/t/p/original/bT68aKa9d7zDF7Z8MaskbWBRqzb.jpg",
+      "critic": 88,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0058262",
+      "title": "The Killers",
+      "year": 1964,
+      "poster": "https://image.tmdb.org/t/p/original/7IeXjRmUZ2pnSFMRh0ZXpu3Nkmn.jpg",
+      "critic": 83,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0058606",
+      "title": "Spider Baby",
+      "year": 1967,
+      "poster": "https://image.tmdb.org/t/p/original/pKKJsmTGt5MndLT8gBfl1pMp4fU.jpg",
+      "critic": 88,
+      "audience": 75
+    },
+    {
+      "imdb_id": "tt0098577",
+      "title": "Vampire's Kiss",
+      "year": 1989,
+      "poster": "https://image.tmdb.org/t/p/original/bEwvlXvvrVLPFwCOND5E38qly01.jpg",
+      "critic": 65,
+      "audience": 54
+    },
+    {
+      "imdb_id": "tt0093605",
+      "title": "Near Dark",
+      "year": 1987,
+      "poster": "https://image.tmdb.org/t/p/original/hVhFNn3IQxxARvnpLIKMx8ZfTtG.jpg",
+      "critic": 80,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0060708",
+      "title": "Modesty Blaise",
+      "year": 1966,
+      "poster": "https://image.tmdb.org/t/p/original/rpQRLEcQeWe2T8TbSJ0zJ0Avqij.jpg",
+      "critic": 50,
+      "audience": 34
+    },
+    {
+      "imdb_id": "tt0075614",
+      "title": "The Psychic",
+      "year": 1977,
+      "poster": "https://image.tmdb.org/t/p/original/uPKvZRB2KsJWEMv91GRqDBOm311.jpg",
+      "critic": 100,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0080057",
+      "title": "Zombie Flesh Eaters",
+      "year": 1979,
+      "poster": "https://image.tmdb.org/t/p/original/jc17a3PqDnQeBzT7GbK0dp8TDvx.jpg",
+      "critic": 45,
+      "audience": 69
+    },
+    {
+      "imdb_id": "tt0833960",
+      "title": "Gardens of the Night",
+      "year": 2008,
+      "poster": "https://image.tmdb.org/t/p/original/bhaR49fQIoXZ13MSed8os1R3Z4A.jpg",
+      "critic": 57,
+      "audience": 65
+    },
+    {
+      "imdb_id": "tt0023293",
+      "title": "The Old Dark House",
+      "year": 1932,
+      "poster": "https://image.tmdb.org/t/p/original/t4058MoAiVg8R1aqHNL3nAP48km.jpg",
+      "critic": 97,
+      "audience": 70
+    },
+    {
+      "imdb_id": "tt0066214",
+      "title": "Performance.",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/yKuqk84TtTpj0nYZS5m680JmprG.jpg",
+      "critic": 81,
+      "audience": 78
+    },
+    {
+      "imdb_id": "tt0070350",
+      "title": "The Mack",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/xcS9bxWGFzC3cA7qAOjcIjKajSf.jpg",
+      "critic": 60,
+      "audience": 84
+    },
+    {
+      "imdb_id": "tt0080360",
+      "title": "Altered States",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/fsoaPN5SWYgZ4B7GG9nRNj33so.jpg",
+      "critic": 87,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0097714",
+      "title": "Last Exit to Brooklyn",
+      "year": 1989,
+      "poster": "https://image.tmdb.org/t/p/original/89Lg30XE7gwVZpJUk0RKqV8CtND.jpg",
+      "critic": 65,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0105275",
+      "title": "Romper Stomper",
+      "year": 1992,
+      "poster": "https://image.tmdb.org/t/p/original/urE3Jzl3zuz2XUmAq2rXubYn3SD.jpg",
+      "critic": 78,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0081698",
+      "title": "Used Cars",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/h9hqesyEBaag8ZkgrBSaUGgGNFF.jpg",
+      "critic": 77,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0036341",
+      "title": "The Seventh Victim",
+      "year": 1943,
+      "poster": "https://image.tmdb.org/t/p/original/cvck16EWDqWK6x4p78N8KyJyJNJ.jpg",
+      "critic": 96,
+      "audience": 62
+    },
+    {
+      "imdb_id": "tt0069421",
+      "title": "Your Vice Is a Locked Room and Only I Have the Key",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/tSpHChci1vxD7WwRkbqcDXgyRpj.jpg",
+      "critic": 100,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0082776",
+      "title": "Ms .45",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/9ulPP8hcBjIrWRqeXsZVjL0uX3E.jpg",
+      "critic": 86,
+      "audience": 72
+    },
+    {
+      "imdb_id": "tt0074851",
+      "title": "The Man Who Fell to Earth",
+      "year": 1976,
+      "poster": "https://image.tmdb.org/t/p/original/gwmPVphE5DMFFGXGMhfEFyxOOYj.jpg",
+      "critic": 79,
+      "audience": 68
+    },
+    {
+      "imdb_id": "tt0069920",
+      "title": "Torso",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/tWwaVVGHkl9FTVRApyAQdBa2ayU.jpg",
+      "critic": 60,
+      "audience": 55
+    },
+    {
+      "imdb_id": "tt0082402",
+      "title": "Fort Apache, the Bronx",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/8p57OvRAG5qswa5UW9O5Y6xZjAV.jpg",
+      "critic": 80,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0090904",
+      "title": "Dangerously Close",
+      "year": 1986,
+      "poster": "https://image.tmdb.org/t/p/original/84iACBvqazsjMvJ2cz40mJF1boo.jpg",
+      "critic": 10,
+      "audience": 38
+    },
+    {
+      "imdb_id": "tt0070165",
+      "title": "Heavy Traffic",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/76z4KHEicnCILz5rePLyZmvcXV4.jpg",
+      "critic": 89,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt1724962",
+      "title": "Beyond Outrage",
+      "year": 2012,
+      "poster": "https://image.tmdb.org/t/p/original/z9nPRD7PIx7dE5BqbYZKVlQawHs.jpg",
+      "critic": 47,
+      "audience": 57
+    },
+    {
+      "imdb_id": "tt0070531",
+      "title": "Phase IV",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/x6fQtAmCD4JlAcUnTfYoinPp1zz.jpg",
+      "critic": 50,
+      "audience": 54
+    },
+    {
+      "imdb_id": "tt0073343",
+      "title": "The Man from Hong Kong",
+      "year": 1975,
+      "poster": "https://image.tmdb.org/t/p/original/lCLUFxMNxcutYcSXbMySWDJvAUd.jpg",
+      "critic": 100,
+      "audience": 63
+    },
+    {
+      "imdb_id": "tt0072730",
+      "title": "A Boy and His Dog",
+      "year": 1975,
+      "poster": "https://image.tmdb.org/t/p/original/dMbkoFzD5sEQvEaqRsIh4pTBJVq.jpg",
+      "critic": 78,
+      "audience": 63
+    },
+    {
+      "imdb_id": "tt0081237",
+      "title": "The Ninth Configuration",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/jlQMBckfnLhiCusar62sJ7WCKBv.jpg",
+      "critic": 80,
+      "audience": 76
+    },
+    {
+      "imdb_id": "tt0097694",
+      "title": "Black Rain",
+      "year": 1989,
+      "poster": "https://image.tmdb.org/t/p/original/uHL1uJoXZeU2zG0MMcXhfgw00tB.jpg",
+      "critic": 86,
+      "audience": 89
+    },
+    {
+      "imdb_id": "tt0073600",
+      "title": "Race with the Devil",
+      "year": 1975,
+      "poster": "https://image.tmdb.org/t/p/original/4ezD93ytLd8707j3Qvg53Mpz5ff.jpg",
+      "critic": 71,
+      "audience": 57
+    },
+    {
+      "imdb_id": "tt0067924",
+      "title": "Vampire Circus",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/sbYsGpPy1JgHjlOb1Onc9xwqr8u.jpg",
+      "critic": 83,
+      "audience": 63
+    },
+    {
+      "imdb_id": "tt0071571",
+      "title": "Gone in 60 Seconds",
+      "year": 1974,
+      "poster": "https://image.tmdb.org/t/p/original/qYyeAodAOe4nHuzkHdN35ValzLT.jpg",
+      "critic": 43,
+      "audience": 65
+    },
+    {
+      "imdb_id": "tt0106912",
+      "title": "Fire in the Sky",
+      "year": 1993,
+      "poster": "https://image.tmdb.org/t/p/original/rTFrjAp1YV49DSTUGCyKSkaEHC8.jpg",
+      "critic": 52,
+      "audience": 57
+    },
+    {
+      "imdb_id": "tt0067341",
+      "title": "Let's Scare Jessica to Death",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/vR8H0KSUYptRjheMjysyidpbPSP.jpg",
+      "critic": 42,
+      "audience": 50
+    },
+    {
+      "imdb_id": "tt0087799",
+      "title": "Night of the Comet",
+      "year": 1984,
+      "poster": "https://image.tmdb.org/t/p/original/xNXnLXu73LotJ9APaJZZXflBelQ.jpg",
+      "critic": 79,
+      "audience": 58
+    },
+    {
+      "imdb_id": "tt1181791",
+      "title": "Black Death",
+      "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/original/gXRERDpyT9s3m2yk6wNmrTWbZfG.jpg",
+      "critic": 72,
+      "audience": 49
+    },
+    {
+      "imdb_id": "tt0072709",
+      "title": "Black Moon",
+      "year": 1975,
+      "poster": "https://image.tmdb.org/t/p/original/tsbauHYC5E7YK7UeMl3FM4U9xhK.jpg",
+      "critic": 42,
+      "audience": 53
+    },
+    {
+      "imdb_id": "tt1788391",
+      "title": "Kill List",
+      "year": 2011,
+      "poster": "https://image.tmdb.org/t/p/original/qwT2I3ons0oD58jIppKmd4qLtvB.jpg",
+      "critic": 79,
+      "audience": 58
+    },
+    {
+      "imdb_id": "tt0066154",
+      "title": "No Blade of Grass",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/vHwFAbUNRVz77LnPEXI7VknB916.jpg",
+      "critic": 29,
+      "audience": 44
+    },
+    {
+      "imdb_id": "tt0080855",
+      "title": "Heaven's Gate",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/kW4Vk31nhtKPKGuYMaVATq3wcHC.jpg",
+      "critic": 57,
+      "audience": 54
+    },
+    {
+      "imdb_id": "tt0083542",
+      "title": "Alone in the Dark",
+      "year": 1982,
+      "poster": "https://image.tmdb.org/t/p/original/5ybBuHOTUMtW000G15WHh31aMNn.jpg",
+      "critic": 62,
+      "audience": 40
+    },
+    {
+      "imdb_id": "tt0068458",
+      "title": "Death Line",
+      "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/original/kXrFXtJRQ2qR6Z45fozdj8tKeTu.jpg",
+      "critic": 87,
+      "audience": 46
+    },
+    {
+      "imdb_id": "tt0165623",
+      "title": "Angst",
+      "year": 1983,
+      "poster": "https://image.tmdb.org/t/p/original/nSYdWrPPwvcs5t5hG67XqDbwncG.jpg",
+      "critic": 100,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0940723",
+      "title": "Left Bank",
+      "year": 2008,
+      "poster": "https://image.tmdb.org/t/p/original/eZgQhrl7Jso80Eoj9lFBStkREW2.jpg",
+      "critic": 83,
+      "audience": 40
+    },
+    {
+      "imdb_id": "tt0097782",
+      "title": "Lost Angels",
+      "year": 1989,
+      "poster": "https://image.tmdb.org/t/p/original/zjOpYWWEijff5hIkSqVOQyMpMJy.jpg",
+      "critic": 40,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0062395",
+      "title": "The Trip",
+      "year": 1967,
+      "poster": "https://image.tmdb.org/t/p/original/tRX6gEJ4G1oFBDxEGdIhfogdjCN.jpg",
+      "critic": 39,
+      "audience": 51
+    },
+    {
+      "imdb_id": "tt0082818",
+      "title": "Nightmare",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/OFysFt0EIXHW89iv38VURpKpKW.jpg",
+      "critic": 33,
+      "audience": 43
+    },
+    {
+      "imdb_id": "tt0092632",
+      "title": "The Believers",
+      "year": 1987,
+      "poster": "https://image.tmdb.org/t/p/original/wMDOgjHoDdKKj3UNZzjP8AW0wxR.jpg",
+      "critic": 35,
+      "audience": 45
+    },
+    {
+      "imdb_id": "tt0101420",
+      "title": "Begotten",
+      "year": 1991,
+      "poster": "https://image.tmdb.org/t/p/original/tddYsHrlWBOcG3M333jQXQjU2vv.jpg",
+      "critic": 73,
+      "audience": 64
+    },
+    {
+      "imdb_id": "tt1075113",
+      "title": "Don't Look Back",
+      "year": 2009,
+      "poster": "https://image.tmdb.org/t/p/original/pvbhKQMP4Vi2BLyA38MqUBRPZPM.jpg",
+      "critic": 33,
+      "audience": 42
+    },
+    {
+      "imdb_id": "tt0062711",
+      "title": "Barbarella",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/facTz5BZz4AkJal1FWgjYciekih.jpg",
+      "critic": 64,
+      "audience": 56
+    },
+    {
+      "imdb_id": "tt0092240",
+      "title": "The Wraith",
+      "year": 1986,
+      "poster": "https://image.tmdb.org/t/p/original/vHrNnqqRYWzkkrJV8MtmUGgC4Kk.jpg",
+      "critic": 33,
+      "audience": 61
+    },
+    {
+      "imdb_id": "tt0061789",
+      "title": "How I Won the War",
+      "year": 1967,
+      "poster": "https://image.tmdb.org/t/p/original/m3m6WC9JEKpCNht26OcFEDVU3V1.jpg",
+      "critic": 47,
+      "audience": 59
+    },
+    {
+      "imdb_id": "tt0082801",
+      "title": "Neighbors",
+      "year": 1981,
+      "poster": "https://image.tmdb.org/t/p/original/eJ9AU7JY4lbda7EeXA0ONncV5Dm.jpg",
+      "critic": 57,
+      "audience": 50
+    },
+    {
+      "imdb_id": "tt0066380",
+      "title": "Vampyros Lesbos",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/qaZc7veACx1vmq6tZtnIT6vLmxM.jpg",
+      "critic": 67,
+      "audience": 48
+    },
+    {
+      "imdb_id": "tt0083739",
+      "title": "Class of 1984",
+      "year": 1982,
+      "poster": "https://image.tmdb.org/t/p/original/qIu9UGDLeACl7YGuAAgTFfQ0j8I.jpg",
+      "critic": 67,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0114941",
+      "title": "Wild Side",
+      "year": 1996,
+      "poster": "https://image.tmdb.org/t/p/original/pFRrKn9wqPECjN1QOrDdS3BVdL5.jpg",
+      "critic": 60,
+      "audience": 47
+    },
+    {
+      "imdb_id": "tt0067656",
+      "title": "A Bay of Blood",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/cTqmAcZwaEY609QDCLpgBlwijn9.jpg",
+      "critic": 81,
+      "audience": 62
+    },
+    {
+      "imdb_id": "tt0023238",
+      "title": "The Most Dangerous Game",
+      "year": 1932,
+      "poster": "https://image.tmdb.org/t/p/original/3aNlOIFlGOnIzxqvAWpgm5Sly1H.jpg",
+      "critic": 100,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0074226",
+      "title": "Blue Sunshine",
+      "year": 1977,
+      "poster": "https://image.tmdb.org/t/p/original/kFH2Cug6i9ztE89QZn4XmCki65C.jpg",
+      "critic": 88,
+      "audience": 44
+    },
+    {
+      "imdb_id": "tt0065036",
+      "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
+      "year": 1969,
+      "poster": "https://image.tmdb.org/t/p/original/b0iWpWPBqZLHNCfhSEjvJH6UT3h.jpg",
+      "critic": 57,
+      "audience": 28
+    },
+    {
+      "imdb_id": "tt1191111",
+      "title": "Enter the Void",
+      "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/original/krKnsfvSJM1PL40tLicRhVQ6kuG.jpg",
+      "critic": 73,
+      "audience": 72
+    },
+    {
+      "imdb_id": "tt0089346",
+      "title": "Into the Night",
+      "year": 1985,
+      "poster": "https://image.tmdb.org/t/p/original/voqfHibbZVtl9o6D2MRcdQmN42i.jpg",
+      "critic": 40,
+      "audience": 49
+    },
+    {
+      "imdb_id": "tt0067419",
+      "title": "The Mephisto Waltz",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/h2zyPibxcUtvcL9Fxxsh1RRkW49.jpg",
+      "critic": 63,
+      "audience": 44
+    },
+    {
+      "imdb_id": "tt0053619",
+      "title": "L'Avventura",
+      "year": 1960,
+      "poster": "https://image.tmdb.org/t/p/original/7kUXAS8K7Ihw1T1mhARjnLuMVk3.jpg",
+      "critic": 94,
+      "audience": 88
+    },
+    {
+      "imdb_id": "tt0063049",
+      "title": "Head",
+      "year": 1968,
+      "poster": "https://image.tmdb.org/t/p/original/pvMy7sTqOEr7faJzDE5UD0zUiHA.jpg",
+      "critic": 71,
+      "audience": 71
+    },
+    {
+      "imdb_id": "tt0085387",
+      "title": "D.C. Cab",
+      "year": 1983,
+      "poster": "https://image.tmdb.org/t/p/original/7ToBZQaV5qspXjM8hat8kcbNcQc.jpg",
+      "critic": 18,
+      "audience": 52
+    },
+    {
+      "imdb_id": "tt0072895",
+      "title": "Dolemite",
+      "year": 1975,
+      "poster": "https://image.tmdb.org/t/p/original/sc81lG0MdHq1UCY5b2B10c9wSKw.jpg",
+      "critic": 60,
+      "audience": 66
+    },
+    {
+      "imdb_id": "tt0089489",
+      "title": "Lifeforce",
+      "year": 1985,
+      "poster": "https://image.tmdb.org/t/p/original/AeLmyhJNQd2BMFGER36ctAeDhIp.jpg",
+      "critic": 58,
+      "audience": 46
+    },
+    {
+      "imdb_id": "tt0081635",
+      "title": "Times Square",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/qP0TwJogXrELdslBxReRzEgfexQ.jpg",
+      "critic": 50,
+      "audience": 74
+    },
+    {
+      "imdb_id": "tt0067185",
+      "title": "Harold and Maude",
+      "year": 1971,
+      "poster": "https://image.tmdb.org/t/p/original/t7qEuGwDjcYu8ajaKZ68DeDnOxw.jpg",
+      "critic": 86,
+      "audience": 93
+    },
+    {
+      "imdb_id": "tt0064704",
+      "title": "Mumsy, Nanny, Sonny & Girly",
+      "year": 1970,
+      "poster": "https://image.tmdb.org/t/p/original/A45LM2gVGv1pbh5BRrfSS2ccTKa.jpg",
+      "critic": 33,
+      "audience": 51
+    },
+    {
+      "imdb_id": "tt0093185",
+      "title": "The Hidden",
+      "year": 1987,
+      "poster": "https://image.tmdb.org/t/p/original/pCoFtULUIebq13EU9glcZjfdC1a.jpg",
+      "critic": 76,
+      "audience": 73
+    },
+    {
+      "imdb_id": "tt0052609",
+      "title": "Beast from Haunted Cave",
+      "year": 1959,
+      "poster": "https://image.tmdb.org/t/p/original/yTS0VnwfbHJxnTM1kbPdj5YMshk.jpg",
+      "critic": 67,
+      "audience": 22
+    },
+    {
+      "imdb_id": "tt0070634",
+      "title": "The Satanic Rites of Dracula",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/ixkF1HcgQ8wlafCok5hHzi3iYI0.jpg",
+      "critic": 33,
+      "audience": 30
+    },
+    {
+      "imdb_id": "tt0032475",
+      "title": "Flash Gordon Conquers the Universe",
+      "year": 1940,
+      "poster": "https://image.tmdb.org/t/p/original/5vT3VkTpdLQ2Me1WWbLHA7QCLr4.jpg",
+      "critic": 86,
+      "audience": 57
+    },
+    {
+      "imdb_id": "tt0080771",
+      "title": "Galaxina",
+      "year": 1980,
+      "poster": "https://image.tmdb.org/t/p/original/A66Uw4QFyESPwnDnlvudKKR2Qsv.jpg",
+      "critic": 14,
+      "audience": 22
+    },
+    {
+      "imdb_id": "tt0070222",
+      "title": "Invasion of the Bee Girls",
+      "year": 1973,
+      "poster": "https://image.tmdb.org/t/p/original/wIE6Fsq9KHTwBUOWwy1q9HwOXz3.jpg",
+      "critic": 44,
+      "audience": 32
+    },
+    {
+      "imdb_id": "tt0078238",
+      "title": "Sextette",
+      "year": 1978,
+      "poster": "https://image.tmdb.org/t/p/original/zWSHj9oSGWevfJicBHirkBLHcMa.jpg",
+      "critic": 25,
+      "audience": 32
+    }
+  ],
+  "skipped": [
+    "tt0085375",
+    "tt0067429",
+    "tt0109791",
+    "tt0072209",
+    "tt0073333",
+    "tt0064643",
+    "tt0078935",
+    "tt0088402",
+    "tt0068206",
+    "tt0079944",
+    "tt3472226",
+    "tt0081070",
+    "tt0073540",
+    "tt4145108",
+    "tt0060648",
+    "tt0067885",
+    "tt0071840",
+    "tt0084287",
+    "tt0068902",
+    "tt0093593",
+    "tt0054116",
+    "tt0066302",
+    "tt0095012",
+    "tt0066019",
+    "tt0057443",
+    "tt0072007",
+    "tt0221015",
+    "tt0073756",
+    "tt0085951",
+    "tt0071456",
+    "tt0059170",
+    "tt0070565",
+    "tt1087890",
+    "tt0072662",
+    "tt0065999",
+    "tt0073778",
+    "tt0068444",
+    "tt0071276",
+    "tt0075375",
+    "tt0081159",
+    "tt0069343",
+    "tt0072157",
+    "tt0064904",
+    "tt0067084",
+    "tt0064186",
+    "tt0203635",
+    "tt0111293",
+    "tt0068183",
+    "tt0061994",
+    "tt0069253",
+    "tt0082966",
+    "tt0075930",
+    "tt0063413",
+    "tt0061634",
+    "tt0086192",
+    "tt0093468",
+    "tt0076670",
+    "tt0085124",
+    "tt0091706",
+    "tt0072960",
+    "tt0066104",
+    "tt0051542",
+    "tt0071628",
+    "tt0076295",
+    "tt0063549",
+    "tt0069375",
+    "tt0082361",
+    "tt0067630",
+    "tt0045787",
+    "tt0066040",
+    "tt0069124",
+    "tt0069745",
+    "tt0065569",
+    "tt0062712",
+    "tt0081975",
+    "tt0063510",
+    "tt0082000",
+    "tt0115506",
+    "tt0072626",
+    "tt0071120",
+    "tt0109087",
+    "tt0075662",
+    "tt0057860",
+    "tt0064055",
+    "tt0083628",
+    "tt0072695",
+    "tt0164401",
+    "tt0092765",
+    "tt0238080",
+    "tt0074210",
+    "tt0071225",
+    "tt0069322",
+    "tt0065478",
+    "tt0061412",
+    "tt0054691",
+    "tt0211957",
+    "tt0235245",
+    "tt0164455",
+    "tt0164879",
+    "tt0310824",
+    "tt0212042",
+    "tt0088891",
+    "tt0066905",
+    "tt0833949",
+    "tt0154330",
+    "tt0099278",
+    "tt0077351",
+    "tt0040249",
+    "tt0236124",
+    "tt0075888",
+    "tt0069924",
+    "tt0057970",
+    "tt0055887",
+    "tt0094957",
+    "tt0051951",
+    "tt0069540",
+    "tt0074383",
+    "tt0074342",
+    "tt0135363",
+    "tt0089002",
+    "tt0092859",
+    "tt0055902",
+    "tt0071426",
+    "tt0069994",
+    "tt0061592",
+    "tt0074475",
+    "tt0075990",
+    "tt0059155",
+    "tt0088830",
+    "tt0058072",
+    "tt0076024",
+    "tt0101883",
+    "tt0087270",
+    "tt0187505",
+    "tt0076048",
+    "tt0076055",
+    "tt0065750",
+    "tt0079218",
+    "tt0076094",
+    "tt0175694",
+    "tt0186909",
+    "tt0202002",
+    "tt0085841",
+    "tt0080853",
+    "tt0061757",
+    "tt0061759",
+    "tt0072331",
+    "tt0071256",
+    "tt0061782",
+    "tt0089306",
+    "tt0070198",
+    "tt0093231",
+    "tt0135465",
+    "tt0054724",
+    "tt0073139",
+    "tt0071647",
+    "tt0077724",
+    "tt0430216",
+    "tt0163159",
+    "tt0057182",
+    "tt0187988",
+    "tt0228438",
+    "tt0046097",
+    "tt0074715",
+    "tt0093315",
+    "tt0081061",
+    "tt0073233",
+    "tt0080997",
+    "tt0087556",
+    "tt0081016",
+    "tt0081452",
+    "tt0074769",
+    "tt0074775",
+    "tt0102285",
+    "tt0082656",
+    "tt0070325",
+    "tt0091442",
+    "tt0095557",
+    "tt0075740",
+    "tt0057273",
+    "tt0077895",
+    "tt0047211",
+    "tt0066802",
+    "tt0070380",
+    "tt0023002",
+    "tt0068967",
+    "tt0067396",
+    "tt0091579",
+    "tt0097938",
+    "tt0085980",
+    "tt0037115",
+    "tt0097978",
+    "tt0062036",
+    "tt0064729",
+    "tt0080506",
+    "tt0089689",
+    "tt0081236",
+    "tt6662276",
+    "tt0199820",
+    "tt2047840",
+    "tt0091734",
+    "tt0156894",
+    "tt0072006",
+    "tt0075086",
+    "tt0042855",
+    "tt0095900",
+    "tt0086141",
+    "tt0032782",
+    "tt0073609",
+    "tt0186483",
+    "tt0075133",
+    "tt0268582",
+    "tt0070630",
+    "tt0075164",
+    "tt0464185",
+    "tt0079855",
+    "tt0093932",
+    "tt0056460",
+    "tt0083052",
+    "tt0070673",
+    "tt0121116",
+    "tt0028241",
+    "tt0076035",
+    "tt0075202",
+    "tt0038937",
+    "tt0061671",
+    "tt0105408",
+    "tt0063607",
+    "tt0072172",
+    "tt0057507",
+    "tt0080683",
+    "tt0076731",
+    "tt0079160",
+    "tt0073736",
+    "tt0079941",
+    "tt0069308",
+    "tt0078317",
+    "tt0067793",
+    "tt0070752",
+    "tt0072260",
+    "tt0142906",
+    "tt0141897",
+    "tt0069362",
+    "tt0063680",
+    "tt0072286",
+    "tt1603915",
+    "tt0072245",
+    "tt0090184",
+    "tt0100798",
+    "tt0077505",
+    "tt0181077",
+    "tt0070834",
+    "tt0075378",
+    "tt0080081",
+    "tt0096394",
+    "tt0070893",
+    "tt0166016",
+    "tt0088385",
+    "tt0066553",
+    "tt0062493",
+    "tt0178360",
+    "tt0052394",
+    "tt0088427",
+    "tt0068007"
+  ]
+}
