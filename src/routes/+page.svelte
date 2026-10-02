@@ -212,16 +212,20 @@
 		height: 100dvh;
 		max-width: 360px;
 		margin: 0 auto;
+		justify-content: center;
 		padding: 16px;
 		text-align: center;
 	}
+	/* poster shrinks to fit short screens; on tall ones the poster and controls stay together, centered */
 	.poster {
-		flex: 1;
+		flex: 0 1 auto;
 		min-height: 0;
+		display: flex;
+		justify-content: center;
 	}
 	.poster img {
-		width: 100%;
-		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
 		object-fit: contain;
 	}
 	h1 {

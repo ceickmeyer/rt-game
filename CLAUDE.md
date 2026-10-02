@@ -45,7 +45,7 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - The finished result is saved in localStorage (`rt-game:<day>`) so refreshing can't replay the day
 - The page reloads itself when the local date changes (open tab past midnight)
 - Share text: date, title, points (never the actual scores), site URL
-- Layout must never scroll: main is 100dvh and the poster flexes to fill what the controls leave
+- Layout must never scroll: main is 100dvh, the poster shrinks to fit what the controls leave, and on tall screens poster + controls are centered together
 - TMDB poster URLs are rewritten /original/ -> /w500/
 
 ## Reveal animation (src/routes/+page.svelte, sounds in src/lib/sound.ts)
