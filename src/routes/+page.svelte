@@ -146,12 +146,12 @@
 		<span>{label}</span>
 		<span class="track">
 			{#if result && at !== null}
-				<i class="gap" style:left="calc(8px + (100% - 16px) * {Math.min(result.guess, at) / 100})" style:width="calc((100% - 16px) * {Math.abs(at - result.guess) / 100})"></i>
+				<i class="gap" style:left="calc(8 * var(--u) + (100% - 16 * var(--u)) * {Math.min(result.guess, at) / 100})" style:width="calc((100% - 16 * var(--u)) * {Math.abs(at - result.guess) / 100})"></i>
 			{/if}
 			<input type="range" {name} min="0" max="100" {value} oninput={(e) => setValue(+e.currentTarget.value)} disabled={!!result} />
 			{#if at !== null}
 				<!-- RT calls 60%+ fresh / positive, so the icon flips as it crosses 60 -->
-				<img class="icon" src={at >= 60 ? icons[0] : icons[1]} alt="" style:left="calc(8px + (100% - 16px) * {at / 100})" in:fly={{ y: -16, duration: 120 }} />
+				<img class="icon" src={at >= 60 ? icons[0] : icons[1]} alt="" style:left="calc(8 * var(--u) + (100% - 16 * var(--u)) * {at / 100})" in:fly={{ y: -16, duration: 120 }} />
 			{/if}
 		</span>
 		<b>{at ?? value}%</b>
@@ -203,17 +203,20 @@
 </main>
 
 <style>
-	/* Everything fits in one screen: the poster takes whatever height the controls leave */
+	/* Everything fits in one screen: the poster takes whatever height the controls leave.
+	   --u is one "pixel" of the design, scaled up to fill big windows (height- or width-bound) and never below 1px */
 	main {
+		--u: clamp(1px, min(100dvh / 760, 100vw / 392), 2px);
 		box-sizing: border-box;
+		font-size: calc(16 * var(--u));
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
 		height: 100dvh;
-		max-width: 360px;
+		max-width: calc(360 * var(--u));
 		margin: 0 auto;
 		justify-content: center;
-		padding: 16px;
+		padding: calc(16 * var(--u));
 		text-align: center;
 	}
 	/* poster shrinks to fit short screens; on tall ones the poster and controls stay together, centered */
@@ -224,14 +227,14 @@
 		justify-content: center;
 	}
 	.poster img {
-		max-width: 100%;
+		width: 100%;
 		max-height: 100%;
 		object-fit: contain;
 	}
 	h1 {
-		font-size: 1.05rem;
+		font-size: 1.05em;
 		font-weight: 500;
-		margin: 10px 0 4px;
+		margin: calc(10 * var(--u)) 0 calc(4 * var(--u));
 	}
 	h1 span,
 	p {
@@ -239,13 +242,13 @@
 	}
 	h2 {
 		margin: 0;
-		font-size: 1.6rem;
+		font-size: 1.6em;
 		font-weight: 600;
 		font-variant-numeric: tabular-nums;
 		white-space: nowrap;
 	}
 	h2 span {
-		font-size: 1rem;
+		font-size: 0.625em;
 		font-weight: 400;
 		color: var(--muted);
 	}
@@ -253,9 +256,9 @@
 		display: grid;
 		grid-template-columns: 4.5em 1fr 3em;
 		align-items: center;
-		gap: 8px;
+		gap: calc(8 * var(--u));
 		text-align: left;
-		margin-top: 6px;
+		margin-top: calc(6 * var(--u));
 	}
 	label b {
 		font-weight: 500;
@@ -265,14 +268,14 @@
 	.track {
 		position: relative;
 		display: flex;
-		height: 28px;
+		height: calc(28 * var(--u));
 		align-items: center;
 	}
-	/* custom range so the 16px thumb lines up with the guess marker and gap */
+	/* custom range so the calc(16 * var(--u)) thumb lines up with the guess marker and gap */
 	input[type='range'] {
 		appearance: none;
 		width: 100%;
-		height: 20px;
+		height: calc(20 * var(--u));
 		margin: 0;
 		background: transparent;
 		cursor: pointer;
@@ -281,26 +284,26 @@
 		cursor: default;
 	}
 	input[type='range']::-webkit-slider-runnable-track {
-		height: 4px;
-		border-radius: 2px;
+		height: calc(4 * var(--u));
+		border-radius: calc(2 * var(--u));
 		background: var(--track);
 	}
 	input[type='range']::-moz-range-track {
-		height: 4px;
-		border-radius: 2px;
+		height: calc(4 * var(--u));
+		border-radius: calc(2 * var(--u));
 		background: var(--track);
 	}
 	input[type='range']::-webkit-slider-thumb {
 		appearance: none;
-		width: 16px;
-		height: 16px;
-		margin-top: -6px;
+		width: calc(16 * var(--u));
+		height: calc(16 * var(--u));
+		margin-top: calc(-6 * var(--u));
 		border-radius: 50%;
 		background: var(--fg);
 	}
 	input[type='range']::-moz-range-thumb {
-		width: 16px;
-		height: 16px;
+		width: calc(16 * var(--u));
+		height: calc(16 * var(--u));
 		border: 0;
 		border-radius: 50%;
 		background: var(--fg);
@@ -312,21 +315,21 @@
 		pointer-events: none;
 	}
 	.gap {
-		height: 4px;
-		margin-top: -2px;
+		height: calc(4 * var(--u));
+		margin-top: calc(-2 * var(--u));
 		background: var(--muted);
 	}
 	.icon {
-		width: 26px;
-		height: 26px;
+		width: calc(26 * var(--u));
+		height: calc(26 * var(--u));
 		object-fit: contain;
 		transform: translate(-50%, -50%);
-		filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.3));
+		filter: drop-shadow(0 calc(1 * var(--u)) calc(2 * var(--u)) rgb(0 0 0 / 0.3));
 	}
 	p {
 		height: 1.3em;
-		margin: 2px 0 0;
-		font-size: 0.85rem;
+		margin: calc(2 * var(--u)) 0 0;
+		font-size: 0.85em;
 		text-align: right;
 	}
 	p span {
@@ -338,28 +341,28 @@
 	}
 	/* same height before and after guessing, so nothing shifts */
 	.end {
-		height: 72px;
-		margin-top: 8px;
+		height: calc(72 * var(--u));
+		margin-top: calc(8 * var(--u));
 	}
 	small {
 		display: block;
-		margin-top: 6px;
+		margin-top: calc(6 * var(--u));
 		color: var(--muted);
 	}
 	.row {
 		display: flex;
 		align-items: center;
-		gap: 16px;
+		gap: calc(16 * var(--u));
 	}
 	button {
 		flex: 1;
 		width: 100%;
-		padding: 10px;
+		padding: calc(10 * var(--u));
 		font: inherit;
 		color: var(--bg);
 		background: var(--fg);
 		border: 0;
-		border-radius: 4px;
+		border-radius: calc(4 * var(--u));
 		cursor: pointer;
 	}
 </style>
