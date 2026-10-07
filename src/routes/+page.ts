@@ -7,10 +7,13 @@ import type { PageLoad } from './$types';
 export const ssr = false;
 
 export const load: PageLoad = async ({ fetch }) => {
-	const day = localDay();
-	const res = await fetch(`/api/movie?d=${day}`);
+	const res = await fetch(`/api/movie?d=${localDay()}`);
 	if (!res.ok) error(res.status, (await res.json().catch(() => null))?.message ?? 'Could not load movie');
-	const movie: { imdb_id: string; title: string; year: number | null; poster: string | null } =
-		await res.json();
-	return { day, movie };
+	// day is the play day this movie belongs to (can be before today), next is when the next one comes out
+	const data: {
+		day: string;
+		next: string;
+		movie: { imdb_id: string; title: string; year: number | null; poster: string | null };
+	} = await res.json();
+	return data;
 };

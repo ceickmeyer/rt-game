@@ -1,5 +1,6 @@
 import { error, json } from '@sveltejs/kit';
 import { supabase } from '#lib/server/supabase.js';
+import { ALL_DAYS, gameDay, nextGameDay } from '#lib/day.js';
 import type { RequestHandler } from './$types';
 
 const DAY_MS = 86_400_000;
@@ -14,7 +15,12 @@ export const GET: RequestHandler = async ({ url }) => {
 	const utcToday = Date.parse(new Date().toISOString().slice(0, 10) + 'T00:00:00Z');
 	if (Math.abs(requested - utcToday) > DAY_MS) error(400, 'Date out of range');
 
-	const { data: id, error: rpcError } = await supabase.rpc('rt_movie_for_day', { d: day });
+	// Falls back to every day if rt_settings hasn't been created yet
+	const { data: settings } = await supabase.from('rt_settings').select('play_days').maybeSingle();
+	const playDays: number[] = settings?.play_days ?? ALL_DAYS;
+	const game = gameDay(day, playDays);
+
+	const { data: id, error: rpcError } = await supabase.rpc('rt_movie_for_day', { d: game });
 	if (rpcError) error(500, rpcError.message);
 	if (!id) error(503, 'Out of movies');
 
@@ -24,5 +30,5 @@ export const GET: RequestHandler = async ({ url }) => {
 		.eq('imdb_id', id)
 		.single();
 	if (err) error(500, err.message);
-	return json(movie);
+	return json({ day: game, next: nextGameDay(day, playDays), movie });
 };

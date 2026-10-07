@@ -1,6 +1,6 @@
-# rt-game
+# Tomatle
 
-Guess the Rotten Tomatoes critic and audience scores for a movie poster.
+The daily movie score guessing game: guess the Rotten Tomatoes critic and audience scores for a movie poster.
 
 - `python rt_dump.py <source>` writes `rt_scores.json`
 - `npm run import` upserts `rt_scores.json` into Supabase (`rt_movies`)

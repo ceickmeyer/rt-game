@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SvelteSet } from 'svelte/reactivity';
-	import { localDay } from '#lib/day.js';
+	import { ALL_DAYS, gameDay, localDay, nextGameDay } from '#lib/day.js';
 	import { supabase } from '#lib/supabase.js';
 
 	type Movie = {
@@ -67,6 +67,7 @@
 	let saving = $state(false);
 	let played = $state<{ day: string; movie: Movie }[]>([]);
 	let saved = $state<Movie[]>([]);
+	let playDays = $state<number[]>(ALL_DAYS);
 
 	// Editable copy of the saved order; resets whenever fresh data arrives (load, save, revert)
 	let queue = $derived<Movie[]>(saved.map((m) => ({ ...m })));
@@ -105,11 +106,14 @@
 				status = 'denied';
 				return;
 			}
-			const [movies, daily] = await Promise.all([
+			const [movies, daily, settings] = await Promise.all([
 				allMovies(),
-				supabase.from('rt_daily').select('day, imdb_id').order('day')
+				supabase.from('rt_daily').select('day, imdb_id').order('day'),
+				supabase.from('rt_settings').select('play_days').maybeSingle()
 			]);
 			if (daily.error) throw daily.error;
+			if (settings.error) throw settings.error;
+			playDays = settings.data?.play_days ?? ALL_DAYS;
 			const byId = new Map(movies.map((m) => [m.imdb_id, m]));
 			const used = new Set(daily.data.map((d) => d.imdb_id));
 			played = daily.data.map((d) => ({ day: d.day, movie: byId.get(d.imdb_id)! }));
@@ -130,6 +134,26 @@
 		else await load(); // picks up any day that got assigned while editing
 	}
 
+	// Mon first; values are 0 = Sunday like Date.getDay()
+	const WEEK = [1, 2, 3, 4, 5, 6, 0].map((n) => ({
+		n,
+		label: new Date(2026, 0, 4 + n).toLocaleDateString(undefined, { weekday: 'short' })
+	}));
+
+	// Saves straight away; the last day left on can't be unchecked
+	async function toggleDay(n: number) {
+		const before = playDays;
+		const next = playDays.includes(n) ? playDays.filter((d) => d !== n) : [...playDays, n].sort();
+		if (!next.length) return;
+		playDays = next;
+		message = '';
+		const { error } = await supabase.from('rt_settings').update({ play_days: next }).eq('id', 1);
+		if (error) {
+			playDays = before;
+			message = error.message;
+		}
+	}
+
 	function revert() {
 		saved = [...saved];
 	}
@@ -145,17 +169,20 @@
 	let rangeTo = $state<number>();
 	let lastClicked = -1;
 
-	// Projected dates: the queue starts the day after the last assigned day, or today if today isn't assigned yet
-	let start = $derived.by(() => {
-		const today = localDay();
+	// Projected dates, one per play day: the queue starts at the current play day if it isn't assigned yet,
+	// otherwise at the play day after the last assigned one
+	let dates = $derived.by(() => {
 		const last = played.at(-1)?.day;
-		const [y, m, d] = (last && last >= today ? last : today).split('-').map(Number);
-		return new Date(y, m - 1, last && last >= today ? d + 1 : d);
+		let day = gameDay(localDay(), playDays);
+		if (last && last >= day) day = nextGameDay(last, playDays);
+		const out: string[] = [];
+		for (let i = 0; i < queue.length; i++, day = nextGameDay(day, playDays)) out.push(day);
+		return out;
 	});
 
 	function dateFor(i: number) {
-		const d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
-		return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+		const [y, m, d] = dates[i].split('-').map(Number);
+		return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
 	}
 
 	function update(next: Movie[]) {
@@ -219,7 +246,7 @@
 </script>
 
 <svelte:head>
-	<title>RT Game · Admin</title>
+	<title>Tomatle · Admin</title>
 </svelte:head>
 
 <svelte:window onbeforeunload={beforeUnload} />
@@ -252,6 +279,21 @@
 			<button class="quiet" onclick={() => supabase.auth.signOut()}>Log out</button>
 		</header>
 		{#if message}<p class="error">{message}</p>{/if}
+
+		<div class="days">
+			New movie on
+			{#each WEEK as { n, label } (n)}
+				<label class="check">
+					<input
+						type="checkbox"
+						checked={playDays.includes(n)}
+						disabled={playDays.length === 1 && playDays.includes(n)}
+						onchange={() => toggleDay(n)}
+					/>
+					{label}
+				</label>
+			{/each}
+		</div>
 
 		<div class="tools">
 			<div>
@@ -409,6 +451,16 @@
 	}
 	details {
 		margin-bottom: 12px;
+	}
+	.days {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin-top: 12px;
+	}
+	.days .check {
+		margin-left: 0;
 	}
 	ol {
 		font-size: 0.9rem;

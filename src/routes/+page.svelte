@@ -24,7 +24,7 @@
 	let step = $state(saved ? 3 : 0);
 	let total = $derived(result ? result.critic.points + result.audience.points : 0);
 	let shownTotal = $state(saved ? saved.critic.points + saved.audience.points : 0);
-	let untilNext = $state(timeToMidnight());
+	let untilNext = $state(timeToNext());
 
 	// TMDB "original" posters are huge; w500 is plenty
 	let poster = $derived(data.movie.poster?.replace('/original/', '/w500/'));
@@ -44,18 +44,19 @@
 		} catch {}
 	}
 
-	function timeToMidnight() {
-		const now = new Date();
-		const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-		const mins = Math.ceil((midnight.getTime() - now.getTime()) / 60_000);
-		return `${Math.floor(mins / 60)}h ${mins % 60}m`;
+	// Counts down to the player's midnight starting the next play day
+	function timeToNext() {
+		const [y, m, d] = data.next.split('-').map(Number);
+		const mins = Math.ceil((new Date(y, m - 1, d).getTime() - Date.now()) / 60_000);
+		const h = Math.floor(mins / 60);
+		return h >= 24 ? `${Math.floor(h / 24)}d ${h % 24}h` : `${h}h ${mins % 60}m`;
 	}
 
 	// Roll over to the new movie at the player's midnight, even if the tab was left open
 	$effect(() => {
 		const check = () => {
-			if (localDay() !== data.day) location.reload();
-			untilNext = timeToMidnight();
+			if (localDay() >= data.next) location.reload();
+			untilNext = timeToNext();
 		};
 		const timer = setInterval(check, 30_000);
 		document.addEventListener('visibilitychange', check);
@@ -120,12 +121,13 @@
 	async function share() {
 		if (!result) return;
 		const text = [
-			`🍅 RT Game · ${formatDay(data.day)}`,
+			`🍅 Tomatle · ${formatDay(data.day)}`,
 			`${data.movie.title} (${data.movie.year})`,
 			`Critics ${result.critic.points}/${MAX_POINTS}`,
 			`Audience ${result.audience.points}/${MAX_POINTS}`,
 			`Total ${total}/${MAX_POINTS * 2}`,
-			location.origin
+			// the day and score let the link preview show this movie and score (see hooks.server.ts)
+			`${location.origin}/?d=${data.day}&s=${total}`
 		].join('\n');
 		await navigator.clipboard.writeText(text);
 		copied = true;

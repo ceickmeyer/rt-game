@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>RT Game · Admin</title>
+	<title>Tomatle · Admin</title>
 </svelte:head>
 
 <form onsubmit={signIn}>

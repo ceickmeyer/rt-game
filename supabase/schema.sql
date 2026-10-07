@@ -132,3 +132,24 @@ $$;
 
 revoke execute on function rt_set_queue(text[]) from public, anon;
 grant execute on function rt_set_queue(text[]) to authenticated;
+
+-- Game settings (a single row). play_days are the weekdays a new movie comes out, 0 = Sunday … 6 = Saturday;
+-- on other days the game keeps showing the most recent play day's movie. Edited on /admin.
+create table if not exists rt_settings (
+  id integer primary key default 1 check (id = 1),
+  play_days smallint[] not null default '{0,1,2,3,4,5,6}'
+    check (cardinality(play_days) > 0 and play_days <@ '{0,1,2,3,4,5,6}')
+);
+
+alter table rt_settings enable row level security;
+
+insert into rt_settings (id) values (1) on conflict do nothing;
+
+drop policy if exists rt_settings_admin_read on rt_settings;
+create policy rt_settings_admin_read on rt_settings for select to authenticated
+  using (exists (select 1 from rt_admins a where a.user_id = auth.uid()));
+
+drop policy if exists rt_settings_admin_update on rt_settings;
+create policy rt_settings_admin_update on rt_settings for update to authenticated
+  using (exists (select 1 from rt_admins a where a.user_id = auth.uid()))
+  with check (exists (select 1 from rt_admins a where a.user_id = auth.uid()));
