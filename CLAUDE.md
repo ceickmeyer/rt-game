@@ -31,7 +31,7 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
   form action after a guess. Never send critic/audience to the client before that.
 
 ## Scoring (src/lib/score.ts; tune only here)
-- MAX_POINTS = 50 per slider (100 total), RANGE = 40, CURVE = 1.5
+- MAX_POINTS = 50 per slider (100 total), RANGE = 50, CURVE = 1.5
 - points = round(MAX_POINTS * (1 - min(|guess - actual|, RANGE) / RANGE) ** CURVE)
 - Goal: leaving the sliders at 50 should score badly
 

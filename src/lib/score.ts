@@ -1,7 +1,7 @@
 // Points per slider. Two sliders, so a perfect game is 2 * MAX_POINTS.
 export const MAX_POINTS = 50;
 // Guesses this far off (or more) score zero.
-export const RANGE = 40;
+export const RANGE = 50;
 // Shape of the dropoff. 1 = linear, >1 = points fall away faster near the target.
 export const CURVE = 1.5;
 
