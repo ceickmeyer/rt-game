@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { fly, scale } from 'svelte/transition';
-	import { MAX_POINTS } from '#lib/score.js';
+	import { MAX_POINTS, points } from '#lib/score.js';
 	import { unlock, tick, ding, finale } from '#lib/sound.js';
 	import { formatDay, localDay } from '#lib/day.js';
 
@@ -148,7 +148,21 @@
 		<span>{label}</span>
 		<span class="track">
 			{#if result && at !== null}
-				<i class="gap" style:left="calc(8 * var(--u) + (100% - 16 * var(--u)) * {Math.min(result.guess, at) / 100})" style:width="calc((100% - 16 * var(--u)) * {Math.abs(at - result.guess) / 100})"></i>
+				<!-- the gap from guess to actual, green when close through red when far, recolored as it stretches -->
+				<i
+					class="gap"
+					style:left="calc(8 * var(--u) + (100% - 16 * var(--u)) * {Math.min(result.guess, at) / 100})"
+					style:width="calc((100% - 16 * var(--u)) * {Math.abs(at - result.guess) / 100})"
+					style:background="hsl({120 * points(result.guess, at) / MAX_POINTS} 70% 45%)"
+				></i>
+				{#if shown}
+					{@const off = result.guess - at}
+					<small
+						class="off"
+						style:left="calc(8 * var(--u) + (100% - 16 * var(--u)) * {Math.min(Math.max((result.guess + at) / 200, 0.1), 0.9)})"
+						in:scale={{ start: 0.6, duration: 200 }}>{off ? `${Math.abs(off)} too ${off > 0 ? 'high' : 'low'}` : 'spot on!'}</small
+					>
+				{/if}
 			{/if}
 			<input type="range" {name} min="0" max="100" {value} oninput={(e) => setValue(+e.currentTarget.value)} disabled={!!result} />
 			{#if at !== null}
@@ -160,7 +174,7 @@
 	</label>
 	<p>
 		{#if result && shown}
-			<span in:scale={{ start: 0.6, duration: 200 }}>guessed {result.guess} · <b>+{result.points}</b></span>
+			<b in:scale={{ start: 0.6, duration: 200 }}>+{result.points}</b>
 		{/if}
 	</p>
 {/snippet}
@@ -244,6 +258,7 @@
 	}
 	h2 {
 		margin: 0;
+		color: var(--accent);
 		font-size: 1.6em;
 		font-weight: 600;
 		font-variant-numeric: tabular-nums;
@@ -301,14 +316,14 @@
 		height: calc(16 * var(--u));
 		margin-top: calc(-6 * var(--u));
 		border-radius: 50%;
-		background: var(--fg);
+		background: var(--accent);
 	}
 	input[type='range']::-moz-range-thumb {
 		width: calc(16 * var(--u));
 		height: calc(16 * var(--u));
 		border: 0;
 		border-radius: 50%;
-		background: var(--fg);
+		background: var(--accent);
 	}
 	.gap,
 	.icon {
@@ -317,9 +332,20 @@
 		pointer-events: none;
 	}
 	.gap {
-		height: calc(4 * var(--u));
-		margin-top: calc(-2 * var(--u));
-		background: var(--muted);
+		height: calc(6 * var(--u));
+		margin-top: calc(-3 * var(--u));
+		border-radius: calc(3 * var(--u));
+	}
+	/* sits in the row under the track, centered on the gap */
+	.off {
+		position: absolute;
+		top: 100%;
+		margin: 0;
+		font-size: 0.8em;
+		color: var(--muted);
+		white-space: nowrap;
+		transform: translateX(-50%);
+		pointer-events: none;
 	}
 	.icon {
 		width: calc(26 * var(--u));
@@ -334,10 +360,8 @@
 		font-size: 0.85em;
 		text-align: right;
 	}
-	p span {
-		display: inline-block;
-	}
 	p b {
+		display: inline-block;
 		color: var(--fg);
 		font-weight: 600;
 	}
@@ -361,8 +385,9 @@
 		width: 100%;
 		padding: calc(10 * var(--u));
 		font: inherit;
-		color: var(--bg);
-		background: var(--fg);
+		font-weight: 600;
+		color: var(--on-accent);
+		background: var(--accent);
 		border: 0;
 		border-radius: calc(4 * var(--u));
 		cursor: pointer;

@@ -16,12 +16,17 @@
 		--bg: #fff;
 		--muted: #888;
 		--track: #ddd;
+		/* Rotten Tomatoes red */
+		--accent: #fa320a;
+		--on-accent: #fff;
+		accent-color: var(--accent);
 	}
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--fg: #eee;
 			--bg: #111;
 			--track: #333;
+			--accent: #ff4a24;
 		}
 	}
 	:global(body) {

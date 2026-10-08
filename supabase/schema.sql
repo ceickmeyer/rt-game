@@ -153,3 +153,6 @@ drop policy if exists rt_settings_admin_update on rt_settings;
 create policy rt_settings_admin_update on rt_settings for update to authenticated
   using (exists (select 1 from rt_admins a where a.user_id = auth.uid()))
   with check (exists (select 1 from rt_admins a where a.user_id = auth.uid()));
+
+-- Make the API (PostgREST) pick up new tables/functions right away instead of erroring with "not in the schema cache"
+notify pgrst, 'reload schema';

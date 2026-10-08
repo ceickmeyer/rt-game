@@ -55,8 +55,8 @@
 		border-radius: 4px;
 	}
 	button {
-		color: var(--bg);
-		background: var(--fg);
+		color: var(--on-accent);
+		background: var(--accent);
 		border: 0;
 		cursor: pointer;
 	}

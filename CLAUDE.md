@@ -7,7 +7,7 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 ## Stack
 - SvelteKit 3 + Svelte 5 (runes mode), TypeScript, deployed on Vercel (@sveltejs/adapter-vercel)
 - Supabase project is SHARED with other apps: prefix every table/function/view/policy with `rt_`
-- No CSS framework: plain scoped <style> blocks, CSS vars --fg/--bg/--muted set in +layout.svelte
+- No CSS framework: plain scoped <style> blocks, CSS vars --fg/--bg/--muted/--track and --accent (Rotten Tomatoes red #fa320a, used for buttons, slider thumbs, the total) set in +layout.svelte
 
 ## SvelteKit 3 gotchas (this is NOT v2)
 - Config lives in vite.config.ts inside sveltekit({...}); there is no svelte.config.js
@@ -55,6 +55,8 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 
 ## Reveal animation (src/routes/+page.svelte, sounds in src/lib/sound.ts)
 - After a guess the user's thumb stays put; an RT icon (static/icons) drops in at the guess and slides to the actual score, ticking per number, flipping fresh/rotten (popcorn/spilled) at 60%. Then points pop in, then the total counts up
+- The gap bar between guess and actual is colored by the points it's worth (hue 120 green → 0 red, live during the glide);
+  an "N too high" / "N too low" / "spot on!" label sits under its midpoint, and the row on the right shows only +points
 - The whole reveal must stay under ~2s (glides capped at 550ms). Respect prefers-reduced-motion.
 - Sounds are Web Audio blips (no files); unlock() must run inside the submit click
 
