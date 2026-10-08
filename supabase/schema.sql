@@ -17,6 +17,12 @@ alter table rt_movies enable row level security;
 -- Planned play order, edited on /admin. Lower plays sooner; null = not queued yet (see rt_queue_append).
 alter table rt_movies add column if not exists queue_pos integer;
 
+-- Culled on /admin: never picked for a day. A flag rather than a delete, so `npm run import` can't bring it back.
+alter table rt_movies add column if not exists removed boolean not null default false;
+
+-- IMDb vote count from rt_dump.py: how well known a movie is, for culling obscure ones on /admin
+alter table rt_movies add column if not exists votes integer;
+
 -- One movie per calendar day. Days are the player's local date, so the same date maps to the
 -- same movie in every timezone. imdb_id is unique, so a movie can never be used twice.
 create table if not exists rt_daily (
@@ -46,7 +52,8 @@ begin
     insert into rt_daily (day, imdb_id)
     select d, m.imdb_id
     from rt_movies m
-    where not exists (select 1 from rt_daily x where x.imdb_id = m.imdb_id)
+    where not m.removed
+      and not exists (select 1 from rt_daily x where x.imdb_id = m.imdb_id)
     order by m.queue_pos nulls last, random()
     limit 1
     on conflict do nothing;
@@ -132,6 +139,30 @@ $$;
 
 revoke execute on function rt_set_queue(text[]) from public, anon;
 grant execute on function rt_set_queue(text[]) to authenticated;
+
+-- Removes movies from play (or restores them) from /admin. A restored movie goes to the end of the queue.
+create or replace function rt_set_removed(ids text[], remove boolean)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if not exists (select 1 from rt_admins where user_id = auth.uid()) then
+    raise exception 'not an admin';
+  end if;
+
+  update rt_movies m
+  set removed = remove,
+    queue_pos = case when remove then m.queue_pos
+      else (select coalesce(max(queue_pos), 0) from rt_movies) + q.n end
+  from unnest(ids) with ordinality as q(imdb_id, n)
+  where m.imdb_id = q.imdb_id;
+end;
+$$;
+
+revoke execute on function rt_set_removed(text[], boolean) from public, anon;
+grant execute on function rt_set_removed(text[], boolean) to authenticated;
 
 -- Game settings (a single row). play_days are the weekdays a new movie comes out, 0 = Sunday … 6 = Saturday;
 -- on other days the game keeps showing the most recent play day's movie. Edited on /admin.

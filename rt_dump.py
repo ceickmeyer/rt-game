@@ -3,8 +3,10 @@
 Dump Rotten Tomatoes critic + audience scores to a JSON file using MDBList.
 
 Usage:
-  export MDBLIST_KEY=your_key_here
   python rt_dump.py <source> [<source> ...]
+  python rt_dump.py --votes        # fill in IMDb vote counts for movies saved before they were recorded
+
+The API key is read from MDBLIST_KEY in .env (or the environment).
 
 A source can be:
   - a public MDBList list URL (e.g. https://mdblist.com/lists/someuser/some-list)
@@ -21,6 +23,18 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+def load_env(path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")):
+    """Reads KEY=value lines from .env without overriding variables already set."""
+    if not os.path.exists(path):
+        return
+    with open(path) as f:
+        for line in f:
+            key, sep, value = line.strip().partition("=")
+            if sep and key and not key.startswith("#"):
+                os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+load_env()
 API_KEY = os.environ.get("MDBLIST_KEY")
 OUT_FILE = "rt_scores.json"
 DELAY = 1.0          # seconds between requests (be nice to the free tier)
@@ -63,12 +77,22 @@ def pick(scores, names):
     return None
 
 
+class ApiError(Exception):
+    pass
+
+
 def fetch_movie(imdb_id):
     query = urllib.parse.urlencode({"apikey": API_KEY, "i": imdb_id})
     data = get_json(f"https://mdblist.com/api/?{query}")
+    # errors such as the daily limit come back as HTTP 200 with {"response": false, "error": "..."}
+    if data.get("response") is False or data.get("error"):
+        raise ApiError(data.get("error") or "no data")
     scores = {}
+    votes = None
     for r in data.get("ratings", []):
         src = (r.get("source") or "").lower()
+        if src == "imdb":
+            votes = r.get("votes")  # how many people rated it: a stand-in for how well known it is
         val = r.get("value")
         if val is None:
             val = r.get("score")
@@ -80,6 +104,7 @@ def fetch_movie(imdb_id):
         "poster": data.get("poster"),
         "critic": pick(scores, CRITIC_NAMES),
         "audience": pick(scores, AUDIENCE_NAMES),
+        "votes": votes or 0,
         "_sources": {k: v for k, v in scores.items() if v is not None},
     }
 
@@ -100,17 +125,25 @@ def save(db):
 
 def main():
     if not API_KEY:
-        sys.exit("Set MDBLIST_KEY first: export MDBLIST_KEY=your_key")
-    if len(sys.argv) < 2:
+        sys.exit("Add MDBLIST_KEY=your_key to .env first")
+    backfill = "--votes" in sys.argv[1:]
+    sources = [a for a in sys.argv[1:] if not a.startswith("--")]
+    if not sources and not backfill:
         sys.exit(__doc__)
 
-    print("Collecting IDs...")
-    ids = collect_ids(sys.argv[1:])
     db = load_existing()
-    db["skipped"] = []  # always retry movies that were missing scores last time
-    done = {m["imdb_id"] for m in db["movies"]}
-    todo = [i for i in ids if i not in done]
-    print(f"{len(ids)} total, {len(todo)} left to fetch\n")
+    by_id = {m["imdb_id"]: m for m in db["movies"]}
+    if sources:
+        print("Collecting IDs...")
+        ids = collect_ids(sources)
+        db["skipped"] = []  # always retry movies that were missing scores last time
+    else:
+        ids = []
+    todo = [i for i in ids if i not in by_id]
+    # saved movies without a vote count get re-fetched just for that
+    if backfill:
+        todo += [m["imdb_id"] for m in db["movies"] if m.get("votes") is None]
+    print(f"{len(ids)} from sources, {len(todo)} to fetch\n")
 
     try:
         for n, imdb_id in enumerate(todo, 1):
@@ -122,9 +155,18 @@ def main():
                     break
                 print(f"[{n}/{len(todo)}] {imdb_id}: HTTP {e.code}, skipping")
                 continue
+            except ApiError as e:
+                if "limit" in str(e).lower():
+                    print(f"\nMDBList: {e} Saving and stopping. Run again tomorrow.")
+                    break
+                print(f"[{n}/{len(todo)}] {imdb_id}: {e}, skipping")
+                continue
 
             sources = movie.pop("_sources")
-            if movie["critic"] is None or movie["audience"] is None:
+            if imdb_id in by_id:
+                by_id[imdb_id]["votes"] = movie["votes"]
+                print(f"[{n}/{len(todo)}] {movie['title']}: {movie['votes'] or 0:,} IMDb votes")
+            elif movie["critic"] is None or movie["audience"] is None:
                 db["skipped"].append(imdb_id)  # missing a score, useless for the game
                 missing = "critic" if movie["critic"] is None else "audience"
                 if movie["critic"] is None and movie["audience"] is None:

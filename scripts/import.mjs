@@ -8,13 +8,14 @@ const supabase = createClient(process.env.PUBLIC_SUPABASE_URL, process.env.SUPAB
 const { movies } = JSON.parse(readFileSync(new URL('../rt_scores.json', import.meta.url)));
 const rows = movies
 	.filter((m) => m.title && m.critic != null && m.audience != null)
-	.map(({ imdb_id, title, year, poster, critic, audience }) => ({
+	.map(({ imdb_id, title, year, poster, critic, audience, votes }) => ({
 		imdb_id,
 		title,
 		year,
 		poster,
 		critic: Math.round(critic),
-		audience: Math.round(audience)
+		audience: Math.round(audience),
+		votes: votes ?? null
 	}));
 
 for (let i = 0; i < rows.length; i += 500) {

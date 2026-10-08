@@ -10,6 +10,7 @@
 		poster: string | null;
 		critic: number;
 		audience: number;
+		votes: number | null;
 	};
 
 	const avg = (m: Movie) => (m.critic + m.audience) / 2;
@@ -37,7 +38,10 @@
 		},
 		newest: { label: 'Newest first', compare: (a, b) => (b.year ?? 0) - (a.year ?? 0) },
 		oldest: { label: 'Oldest first', compare: (a, b) => (a.year ?? 0) - (b.year ?? 0) },
-		title: { label: 'Title A → Z', compare: (a, b) => a.title.localeCompare(b.title) }
+		title: { label: 'Title A → Z', compare: (a, b) => a.title.localeCompare(b.title) },
+		// IMDb votes stand in for how many players will have seen it; unknown counts sort as least known
+		knownLeast: { label: 'Least known first (IMDb votes)', compare: (a, b) => (a.votes ?? 0) - (b.votes ?? 0) },
+		knownMost: { label: 'Most known first (IMDb votes)', compare: (a, b) => (b.votes ?? 0) - (a.votes ?? 0) }
 	};
 
 	function shuffle<T>(items: T[]) {
@@ -67,6 +71,7 @@
 	let saving = $state(false);
 	let played = $state<{ day: string; movie: Movie }[]>([]);
 	let saved = $state<Movie[]>([]);
+	let removed = $state<Movie[]>([]);
 	let playDays = $state<number[]>(ALL_DAYS);
 
 	// Editable copy of the saved order; resets whenever fresh data arrives (load, save, revert)
@@ -75,11 +80,11 @@
 
 	// PostgREST caps responses at 1000 rows, so page through everything
 	async function allMovies() {
-		const rows: (Movie & { queue_pos: number | null })[] = [];
+		const rows: (Movie & { queue_pos: number | null; removed: boolean })[] = [];
 		for (let from = 0; ; from += 1000) {
 			const { data, error } = await supabase
 				.from('rt_movies')
-				.select('imdb_id, title, year, poster, critic, audience, queue_pos')
+				.select('imdb_id, title, year, poster, critic, audience, votes, queue_pos, removed')
 				.order('queue_pos', { nullsFirst: false })
 				.order('imdb_id')
 				.range(from, from + 999);
@@ -117,7 +122,8 @@
 			const byId = new Map(movies.map((m) => [m.imdb_id, m]));
 			const used = new Set(daily.data.map((d) => d.imdb_id));
 			played = daily.data.map((d) => ({ day: d.day, movie: byId.get(d.imdb_id)! }));
-			saved = movies.filter((m) => !used.has(m.imdb_id));
+			saved = movies.filter((m) => !used.has(m.imdb_id) && !m.removed);
+			removed = movies.filter((m) => !used.has(m.imdb_id) && m.removed);
 			status = 'ready';
 		} catch (e) {
 			message = e instanceof Error ? e.message : String((e as { message?: string }).message ?? e);
@@ -152,6 +158,37 @@
 			playDays = before;
 			message = error.message;
 		}
+	}
+
+	// Takes the selected movies out of play. Saved right away, and any unsaved reordering is kept.
+	async function removeSelected() {
+		const ids = queue.filter((m) => selected.has(m.imdb_id)).map((m) => m.imdb_id);
+		message = '';
+		const { error } = await supabase.rpc('rt_set_removed', { ids, remove: true });
+		if (error) {
+			message = error.message;
+			return;
+		}
+		const gone = (m: Movie) => selected.has(m.imdb_id);
+		const edited = queue.filter((m) => !gone(m));
+		removed = [...queue.filter(gone), ...removed];
+		saved = saved.filter((m) => !gone(m));
+		queue = edited;
+		selected.clear();
+	}
+
+	// Puts a removed movie back, at the end of the queue
+	async function restore(m: Movie) {
+		message = '';
+		const { error } = await supabase.rpc('rt_set_removed', { ids: [m.imdb_id], remove: false });
+		if (error) {
+			message = error.message;
+			return;
+		}
+		const edited = [...queue, m];
+		removed = removed.filter((r) => r.imdb_id !== m.imdb_id);
+		saved = [...saved, m];
+		queue = edited;
 	}
 
 	function revert() {
@@ -238,6 +275,9 @@
 		queue.slice(a - 1, b).forEach((m) => selected.add(m.imdb_id));
 	}
 
+	const compact = (n: number | null) =>
+		n == null ? '?' : n.toLocaleString(undefined, { notation: 'compact', maximumFractionDigits: 1 });
+
 	const thumb = (m: Movie) => m.poster?.replace('/original/', '/w92/');
 
 	function beforeUnload(e: BeforeUnloadEvent) {
@@ -321,6 +361,9 @@
 				<button type="button" disabled={!selected.size} onclick={() => moveSelected('bottom')}>
 					Selected to bottom
 				</button>
+				<button type="button" class="danger" disabled={!selected.size} onclick={removeSelected}>
+					Remove selected
+				</button>
 				<label class="check"><input type="checkbox" bind:checked={showNumbers} /> Show numbers</label>
 			</div>
 		</div>
@@ -336,6 +379,20 @@
 			</details>
 		{/if}
 
+		{#if removed.length}
+			<details>
+				<summary>Removed ({removed.length}), never played</summary>
+				<ul>
+					{#each removed as m (m.imdb_id)}
+						<li>
+							{m.title} <span class="muted">{m.year}</span>
+							<button type="button" class="quiet small" onclick={() => restore(m)}>Restore</button>
+						</li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
+
 		<table>
 			<thead>
 				<tr>
@@ -347,6 +404,7 @@
 					<th>Critics</th>
 					<th>Audience</th>
 					<th>Gap</th>
+					<th title="IMDb votes: how well known it is">Votes</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -376,6 +434,7 @@
 						<td>{@render spoiler(m.imdb_id, `${m.critic}`)}</td>
 						<td>{@render spoiler(m.imdb_id, `${m.audience}`)}</td>
 						<td>{@render spoiler(m.imdb_id, `${gap(m)}`)}</td>
+						<td class="muted nowrap">{compact(m.votes)}</td>
 						<td class="nowrap">
 							<button type="button" class="quiet" disabled={i === 0} onclick={() => moveTo(i, i - 1)}>↑</button>
 							<button type="button" class="quiet" disabled={i === queue.length - 1} onclick={() => moveTo(i, i + 1)}>↓</button>
@@ -524,6 +583,21 @@
 		color: var(--fg);
 		background: transparent;
 		border: 1px solid var(--track);
+	}
+	button.danger {
+		color: var(--on-accent);
+		background: var(--accent);
+	}
+	button.small {
+		padding: 1px 8px;
+		font-size: 0.85em;
+	}
+	ul {
+		font-size: 0.9rem;
+		padding-left: 1.2em;
+	}
+	ul li {
+		margin: 2px 0;
 	}
 	button:disabled {
 		opacity: 0.35;

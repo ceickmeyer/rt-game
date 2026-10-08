@@ -19,10 +19,11 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 
 ## Data pipeline
 - rt_dump.py (MDBList API) writes rt_scores.json:
-  { movies: [{ imdb_id, title, year, poster, critic, audience }], skipped: [] }
+  { movies: [{ imdb_id, title, year, poster, critic, audience, votes }], skipped: [] }
+  votes = IMDb vote count (familiarity); `python3 rt_dump.py --votes` backfills movies saved without it
 - `npm run import` (scripts/import.mjs) upserts the JSON into rt_movies, then calls rt_queue_append
   so new movies land at the end of the queue in random order. Safe to re-run.
-- Schema: supabase/schema.sql (rt_movies + queue_pos, rt_daily, rt_admins, rt_settings, rt_movie_for_day, rt_queue_append, rt_set_queue). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
+- Schema: supabase/schema.sql (rt_movies + queue_pos + removed + votes, rt_daily, rt_admins, rt_settings, rt_movie_for_day, rt_queue_append, rt_set_queue, rt_set_removed). Run it by hand in the Supabase SQL editor (no psql/supabase CLI here).
 
 ## Security model
 - rt_movies has RLS enabled with NO policies, so only the service-role client can read it
@@ -70,10 +71,15 @@ Keep the UI VERY minimal and don't add features or chrome unless asked.
 - Weekday checkboxes edit rt_settings.play_days (saved on change; admin-only RLS select/update policies)
 - Shows assigned days (locked) and the upcoming queue with projected dates (one per play day, admin's local day)
 - Reorder via ↑/↓, position input, sorts applied to the selected rows only (they keep their slots) or the whole queue
+- Votes column + "Least/Most known first" sorts (IMDb votes, not a spoiler) are for culling movies players won't know
+- "Remove selected" culls movies via rt_set_removed (rt_movies.removed = true; rt_movie_for_day skips them, and
+  import never resets the flag). The "Removed" list restores them to the end of the queue. Both save immediately
+  and keep unsaved reordering
 - Save sends the full ordered id list to rt_set_queue. Scores/gaps are hidden behind spoiler bars (the owner plays too)
 
 ## Env (.env locally, same names in Vercel project settings)
 - PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
+- MDBLIST_KEY (local only, read by rt_dump.py from .env; not needed in Vercel)
 
 ## Commands
 - npm run dev | npm run check | npm run build | npm run import
